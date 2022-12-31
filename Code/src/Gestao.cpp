@@ -18,7 +18,7 @@ void Gestao::readFileAirlines() {  // INCOMPLETE
         getline(inputString, AirlineCode, ',');
         getline(inputString, AirlineName, ',');
         getline(inputString, AirlineCallSign, ',');
-        getline(inputString, AirlineCountry, ',');
+        getline(inputString, AirlineCountry, '\r');
 
 
     }
@@ -38,8 +38,7 @@ void Gestao::readFileAirports() {  // INCOMPLETE
         getline(inputString, AirportCity, ',');
         getline(inputString, AirportCountry, ',');
         getline(inputString, AirportLatitude, ',');
-        getline(inputString, AirportLongitude, ',');
-        getline(inputString, AirportAltitude, ',');
+        getline(inputString, AirportLongitude, '\r');
 
     }
 }
@@ -54,8 +53,11 @@ void Gestao::readFileFlights() {  // INCOMPLETE
         string FlightSource, FlightTarget, FlightAirline;
         getline(inputString, FlightSource, ',');
         getline(inputString, FlightTarget, ',');
-        getline(inputString, FlightAirline, ',');
+        getline(inputString, FlightAirline, '\r');
 
     }
+}
 
+list<Flight> Gestao::getFlights() const {
+    return flights_;
 }

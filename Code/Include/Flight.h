@@ -2,6 +2,7 @@
 #ifndef TRABALHOAED2_FLIGHT_H
 #define TRABALHOAED2_FLIGHT_H
 #include "Airport.h"
+#include "Airline.h"
 #include <iostream>
 
 class Flight {
@@ -13,6 +14,7 @@ public:
 private:
     Airport source_; // Flight source airport
     Airport target_; // Flight target airport
+    Airline airline_; // Flight airline
 };
 
 

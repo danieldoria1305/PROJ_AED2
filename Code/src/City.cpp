@@ -7,11 +7,11 @@
 City::City(string name, list<Airport> airports): name_(name), airports_(airports) {}
 City::City() {}
 
-string City::getName() {
+string City::getName() const{
     return name_;
 }
 
-list<Airport> City::getAirports() {
+list<Airport> City::getAirports() const{
     return airports_;
 }
 

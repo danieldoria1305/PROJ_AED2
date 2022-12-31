@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "TrabalhoAED2.exe"
-		},
-		{
-			"path" : "TrabalhoAED2.pdb"
+			"path" : "TrabalhoAED2"
 		}
 	],
 	"backtrace" : 1,
@@ -77,16 +74,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "TrabalhoAED2",
-	"nameOnDisk" : "TrabalhoAED2.exe",
+	"nameOnDisk" : "TrabalhoAED2",
 	"paths" : 
 	{
 		"build" : ".",
