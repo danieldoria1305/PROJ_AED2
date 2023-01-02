@@ -28,5 +28,10 @@ void Country::addCity(const City &c) {
 
 void Country::addAirport(const Airport &ap, string city) {
     auto it = cities_.find(city);
+    if(it==cities_.end()){
+        City c(city);
+        addCity(c);
+    }
+    it = cities_.find(city);
     it->second.addAirport(ap);
 }

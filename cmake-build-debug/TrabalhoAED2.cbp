@@ -82,27 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/Include/Airline.h">
-			<Option target="TrabalhoAED2"/>
-		</Unit>
-		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/Include/Airport.h">
-			<Option target="TrabalhoAED2"/>
-		</Unit>
-		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/Include/App.h">
-			<Option target="TrabalhoAED2"/>
-		</Unit>
-		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/Include/City.h">
-			<Option target="TrabalhoAED2"/>
-		</Unit>
-		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/Include/Country.h">
-			<Option target="TrabalhoAED2"/>
-		</Unit>
-		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/Include/Flight.h">
-			<Option target="TrabalhoAED2"/>
-		</Unit>
-		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/Include/Gestao.h">
-			<Option target="TrabalhoAED2"/>
-		</Unit>
 		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/src/Airline.cpp">
 			<Option target="TrabalhoAED2"/>
 		</Unit>
@@ -122,6 +101,9 @@
 			<Option target="TrabalhoAED2"/>
 		</Unit>
 		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/src/Gestao.cpp">
+			<Option target="TrabalhoAED2"/>
+		</Unit>
+		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/tests/tests.cpp">
 			<Option target="TrabalhoAED2"/>
 		</Unit>
 		<Unit filename="/home/pedropassos/TrabalhoAED2/CMakeLists.txt">

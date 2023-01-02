@@ -17,6 +17,7 @@ public:
     void readFileAirlines(); // Reads the airlines.csv file
     void readFileAirports(); // Reads the airports.csv file
     void readFileFlights(); // Reads the flights.csv file
+    void printAllAirports();
 private:
     unMcountry countries_; // Unordered_map of countries
     list<Flight> flights_; // List of flights

@@ -6,9 +6,21 @@
 #include <algorithm>
 #include <cstring>
 
+void Gestao::printAllAirports(){
+    for(pair<string,Country> c:countries_){
+        for(pair<string,City> city:c.second.getCities()){
+            cout << city.first << " ";
+            for(pair<string,Airport> ap:city.second.getAirports()){
+                cout<< ap.first << " ";
+            }
+            cout << endl;
+        }
+    }
+}
+
 void Gestao::readFileAirlines() {  // INCOMPLETE
     std::ifstream airlines;
-    airlines.open("../dataset/airlines.csv");
+    airlines.open("../Code/dataset/airlines.csv");
     string code="", name="", callsign="", country="";
     string line;
     getline(airlines, line); // Skip the first line
@@ -31,7 +43,7 @@ void Gestao::readFileAirlines() {  // INCOMPLETE
 
 void Gestao::readFileAirports() {  // INCOMPLETE
     std::ifstream airports;
-    airports.open("../dataset/airports.csv");
+    airports.open("../Code/dataset/airports.csv");
     string code="", name="", city="", country="", latitude="", longitude="";
     string line;
     getline(airports, line); // Skip the first line
@@ -49,10 +61,6 @@ void Gestao::readFileAirports() {  // INCOMPLETE
             countries_[AirportCountry]=c;
         }
         auto it=countries_.find(AirportCountry);
-        if(countries_[AirportCountry].getCities().find(AirportCity)==countries_[AirportCountry].getCities().end()){
-            City c(AirportCity);
-            it->second.addCity(c);
-        }
         Airport ap(AirportCode,AirportName,stof(AirportLongitude),stof(AirportLatitude));
         it->second.addAirport(ap,AirportCity);
     }
@@ -60,7 +68,7 @@ void Gestao::readFileAirports() {  // INCOMPLETE
 
 void Gestao::readFileFlights() {  // INCOMPLETE
     std::ifstream flights;
-    flights.open("../dataset/flights.csv");
+    flights.open("../Code/dataset/flights.csv");
     string line;
     getline(flights, line); // Skip the first line
     while (getline(flights, line)) {

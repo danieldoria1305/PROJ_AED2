@@ -165,4 +165,10 @@ CMakeFiles/TrabalhoAED2.dir/Code/src/App.cpp.o: \
  /usr/include/c++/11/bits/list.tcc \
  /home/pedropassos/TrabalhoAED2/Code/src/../Include/Airline.h \
  /home/pedropassos/TrabalhoAED2/Code/src/../Include/Country.h \
- /home/pedropassos/TrabalhoAED2/Code/src/../Include/City.h
+ /home/pedropassos/TrabalhoAED2/Code/src/../Include/City.h \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/unordered_map.h
