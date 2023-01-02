@@ -6,17 +6,19 @@
 #include <vector>
 #include "Flight.h"
 #include "Country.h"
+#include <unordered_map>
 
 using namespace std;
 
+typedef unordered_map<string,Country> unMcountry;
 
 class Gestao {
 public:
     void readFileAirlines(); // Reads the airlines.csv file
     void readFileAirports(); // Reads the airports.csv file
     void readFileFlights(); // Reads the flights.csv file
-    list<Flight> getFlights() const; // Returns the list of flights
 private:
+    unMcountry countries_; // Unordered_map of countries
     list<Flight> flights_; // List of flights
 };
 

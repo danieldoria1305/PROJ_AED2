@@ -19,8 +19,13 @@ void Gestao::readFileAirlines() {  // INCOMPLETE
         getline(inputString, AirlineName, ',');
         getline(inputString, AirlineCallSign, ',');
         getline(inputString, AirlineCountry, '\r');
-
-
+        if(countries_.find(AirlineCountry)==countries_.end()){
+            Country c(AirlineCountry);
+            countries_[AirlineCountry]=c;
+        }
+        auto it=countries_.find(AirlineCountry);
+        Airline al(AirlineCode,AirlineName,AirlineCallSign);
+        it->second.addAirline(al);
     }
 }
 
@@ -39,7 +44,17 @@ void Gestao::readFileAirports() {  // INCOMPLETE
         getline(inputString, AirportCountry, ',');
         getline(inputString, AirportLatitude, ',');
         getline(inputString, AirportLongitude, '\r');
-
+        if(countries_.find(AirportCountry)==countries_.end()){
+            Country c(AirportCountry);
+            countries_[AirportCountry]=c;
+        }
+        auto it=countries_.find(AirportCountry);
+        if(countries_[AirportCountry].getCities().find(AirportCity)==countries_[AirportCountry].getCities().end()){
+            City c(AirportCity);
+            it->second.addCity(c);
+        }
+        Airport ap(AirportCode,AirportName,stof(AirportLongitude),stof(AirportLatitude));
+        it->second.addAirport(ap,AirportCity);
     }
 }
 
@@ -56,8 +71,4 @@ void Gestao::readFileFlights() {  // INCOMPLETE
         getline(inputString, FlightAirline, '\r');
 
     }
-}
-
-list<Flight> Gestao::getFlights() const {
-    return flights_;
 }

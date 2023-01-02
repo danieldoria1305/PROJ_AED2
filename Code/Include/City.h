@@ -5,18 +5,22 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <unordered_map>
 
 using namespace std;
 
+typedef unordered_map<string,Airport> unMairport;
+
 class City {
 public:
-    City(string name, list<Airport> airports); // Constructor
+    City(string name); // Constructor
     City(); // Default Constructor
     string getName() const; // Returns the name of the city
-    list<Airport> getAirports() const; // Returns the list of airports of the city
+    unMairport getAirports() const; // Returns the list of airports of the city
+    void addAirport(const Airport& ap);
 private:
     string name_;
-    list<Airport> airports_;
+    unMairport airports_;
 };
 
 

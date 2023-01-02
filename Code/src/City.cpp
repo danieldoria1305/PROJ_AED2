@@ -4,14 +4,17 @@
 #include <vector>
 #include <list>
 
-City::City(string name, list<Airport> airports): name_(name), airports_(airports) {}
+City::City(string name): name_(name){}
 City::City() {}
 
 string City::getName() const{
     return name_;
 }
 
-list<Airport> City::getAirports() const{
+unMairport City::getAirports() const{
     return airports_;
 }
 
+void City::addAirport(const Airport &ap) {
+    airports_[ap.getCode()]=ap;
+}

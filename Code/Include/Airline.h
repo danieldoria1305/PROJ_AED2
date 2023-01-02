@@ -1,6 +1,5 @@
 #ifndef TRABALHOAED2_AIRLINE_H
 #define TRABALHOAED2_AIRLINE_H
-#include "Flight.h"
 #include <string>
 #include <list>
 
