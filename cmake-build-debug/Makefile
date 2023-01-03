@@ -297,6 +297,30 @@ Code/src/Gestao.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.s
 .PHONY : Code/src/Gestao.cpp.s
 
+Code/src/main.o: Code/src/main.cpp.o
+.PHONY : Code/src/main.o
+
+# target to build an object file
+Code/src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o
+.PHONY : Code/src/main.cpp.o
+
+Code/src/main.i: Code/src/main.cpp.i
+.PHONY : Code/src/main.i
+
+# target to preprocess a source file
+Code/src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.i
+.PHONY : Code/src/main.cpp.i
+
+Code/src/main.s: Code/src/main.cpp.s
+.PHONY : Code/src/main.s
+
+# target to generate assembly for a file
+Code/src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.s
+.PHONY : Code/src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -327,6 +351,9 @@ help:
 	@echo "... Code/src/Gestao.o"
 	@echo "... Code/src/Gestao.i"
 	@echo "... Code/src/Gestao.s"
+	@echo "... Code/src/main.o"
+	@echo "... Code/src/main.i"
+	@echo "... Code/src/main.s"
 .PHONY : help
 
 

@@ -103,6 +103,9 @@
 		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/src/Gestao.cpp">
 			<Option target="TrabalhoAED2"/>
 		</Unit>
+		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/src/main.cpp">
+			<Option target="TrabalhoAED2"/>
+		</Unit>
 		<Unit filename="/home/pedropassos/TrabalhoAED2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

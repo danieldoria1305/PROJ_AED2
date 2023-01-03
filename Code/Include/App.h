@@ -5,10 +5,10 @@
 
 class App {
 public:
-   void start(); // Starts the application
-   bool printUserMenu(); // Prints the User Menu/Interface
+    void start(); // Starts the application
+    bool printUserMenu(); // Prints the User Menu/Interface
 private:
-
+    Gestao gestao;
 };
 
 
