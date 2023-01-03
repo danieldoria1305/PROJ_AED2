@@ -50,6 +50,9 @@ bool App::printUserMenu() {
             break;
         case 31:
             return false;
+        default:
+            cout << "Invalid Operation" << endl;
+            return false;
     }
     return true;
 }
