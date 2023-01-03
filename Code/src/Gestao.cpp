@@ -5,6 +5,7 @@
 #include <sstream>
 #include <algorithm>
 #include <cstring>
+#include <cmath>
 
 void Gestao::readFileAirlines() {  // INCOMPLETE
     std::ifstream airlines;
@@ -67,5 +68,23 @@ void Gestao::readFileFlights() {  // INCOMPLETE
         getline(inputString, FlightAirline, '\r');
         this->flights.addEdge(FlightSource,FlightTarget,FlightAirline);
     }
+}
+
+double Gestao::calculateDistance(Airport airport1, Airport airport2) {
+    float long1 = airport1.getLongitude();
+    float lat1 = airport1.getLatitude();
+    lat1 = (lat1) * M_PI / 180.0;
+
+    float long2 = airport2.getongitude();
+    float lat2 = airport2.getLatitude();
+    lat2 = (lat2) * M_PI / 180.0;
+
+    dLat = (lat2 - lat1) * M_PI / 180.0;
+    dLong = (long2 - long1) * M_PI / 180.0;
+
+    double a = pow(sin(dLat / 2), 2) * pow(sin(dLong / 2), 2) * cos(lat1) * cos(lat2);
+    double rad = 6371;
+    double c = 2 * asin(sqrt(a));
+    return rad * c;
 }
 
