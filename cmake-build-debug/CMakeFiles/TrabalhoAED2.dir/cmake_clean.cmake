@@ -13,8 +13,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o.d"
   "CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.o"
   "CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.o.d"
-  "CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o"
-  "CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o.d"
   "TrabalhoAED2"
   "TrabalhoAED2.pdb"
 )

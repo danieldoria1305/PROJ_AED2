@@ -16,10 +16,10 @@ class Flight {
         list<Target> targets;
         bool visited=false;
     };
-public:
+
     unordered_map<string,Source> sources; // Unordered map of Airports being represented
 
-
+public:
     Flight();
     void addEdge(string source, string target, string airline);
     unordered_map<string,Source> getSources();

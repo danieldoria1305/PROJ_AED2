@@ -58,8 +58,7 @@
 				3,
 				4,
 				5,
-				6,
-				7
+				6
 			]
 		}
 	],
@@ -98,8 +97,7 @@
 				3,
 				4,
 				5,
-				6,
-				7
+				6
 			]
 		}
 	],
@@ -145,12 +143,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Code/src/Gestao.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Code/tests/tests.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
