@@ -6,18 +6,6 @@
 #include <algorithm>
 #include <cstring>
 
-void Gestao::printAllAirports(){
-    for(pair<string,Country> c:countries_){
-        for(pair<string,City> city:c.second.getCities()){
-            cout << city.first << " ";
-            for(pair<string,Airport> ap:city.second.getAirports()){
-                cout<< ap.first << " ";
-            }
-            cout << endl;
-        }
-    }
-}
-
 void Gestao::readFileAirlines() {  // INCOMPLETE
     std::ifstream airlines;
     airlines.open("../Code/dataset/airlines.csv");
@@ -77,6 +65,7 @@ void Gestao::readFileFlights() {  // INCOMPLETE
         getline(inputString, FlightSource, ',');
         getline(inputString, FlightTarget, ',');
         getline(inputString, FlightAirline, '\r');
-
+        this->flights.addEdge(FlightSource,FlightTarget,FlightAirline);
     }
 }
+
