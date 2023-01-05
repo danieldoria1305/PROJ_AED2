@@ -4,14 +4,14 @@
 #include <set>
 #include <queue>
 #include <vector>
-#include "Flight.h"
+#include "Flights.h"
 #include "Country.h"
 #include "Airport.h"
 #include <unordered_map>
 
 using namespace std;
 
-typedef unordered_map<string,Country> unMcountry;
+typedef unordered_map<string,Country> M_country;
 
 class Gestao {
 public:
@@ -20,8 +20,8 @@ public:
     void readFileFlights(); // Reads the flights.csv file
     double calculateDistance(Airport airport1, Airport airport2); // Calculates the distance between two coordinates using the Haversine formula
 private:
-    unMcountry countries_; // Unordered_map of countries
-    Flight flights; // Graph of flights
+    M_country countries_; // Unordered_map of countries
+    Flights flights; // Graph of flights
 };
 
 

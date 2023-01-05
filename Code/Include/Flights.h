@@ -1,12 +1,12 @@
 
-#ifndef TRABALHOAED2_FLIGHT_H
-#define TRABALHOAED2_FLIGHT_H
+#ifndef TRABALHOAED2_FLIGHTS_H
+#define TRABALHOAED2_FLIGHTS_H
 #include "Airport.h"
 #include "Airline.h"
 #include <iostream>
 #include <unordered_map>
 
-class Flight {
+class Flights {
     struct Target {
         string target;
         string airline;
@@ -20,11 +20,10 @@ class Flight {
     unordered_map<string,Source> sources; // Unordered map of Airports being represented
 
 public:
-    Flight();
+    Flights();
     void addEdge(string source, string target, string airline);
-    unordered_map<string,Source> getSources();
     void bfs(string source);
 };
 
 
-#endif //TRABALHOAED2_FLIGHT_H
+#endif //TRABALHOAED2_FLIGHTS_H

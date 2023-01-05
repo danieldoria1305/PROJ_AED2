@@ -11,7 +11,7 @@ string City::getName() const{
     return name_;
 }
 
-unMairport City::getAirports() const{
+M_airport City::getAirports() const{
     return airports_;
 }
 

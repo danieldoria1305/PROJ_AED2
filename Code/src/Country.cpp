@@ -10,7 +10,7 @@ string Country::getName() const {  // Returns the name of the country
     return name_;
 }
 
-unMcity Country::getCities() const { // Returns the list of cities in the country
+M_city Country::getCities() const { // Returns the list of cities in the country
     return cities_;
 }
 

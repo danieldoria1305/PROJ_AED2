@@ -1,10 +1,10 @@
-#include "../Include/Flight.h"
+#include "../Include/Flights.h"
 #include <iostream>
 #include <queue>
 
-Flight::Flight() {}
+Flights::Flights() {}
 
-void Flight::addEdge(string source, string target, string airline) {
+void Flights::addEdge(string source, string target, string airline) {
     if(sources.find(source)==sources.end()){
         sources[source]={};
     }
@@ -13,7 +13,7 @@ void Flight::addEdge(string source, string target, string airline) {
     it->second.targets.push_back({target,airline});
 }
 
-void Flight::bfs(string source) {
+void Flights::bfs(string source) {
     for (auto& s:sources){
         s.second.visited=false;
     }

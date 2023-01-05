@@ -9,18 +9,18 @@
 
 using namespace std;
 
-typedef unordered_map<string,Airport> unMairport;
+typedef unordered_map<string,Airport> M_airport;
 
 class City {
 public:
     City(string name); // Constructor
     City(); // Default Constructor
     string getName() const; // Returns the name of the city
-    unMairport getAirports() const; // Returns the list of airports of the city
+    M_airport getAirports() const; // Returns the list of airports of the city
     void addAirport(const Airport& ap);
 private:
     string name_;
-    unMairport airports_;
+    M_airport airports_;
 };
 
 
