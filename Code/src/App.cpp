@@ -18,14 +18,15 @@ void App::start() {
 bool App::printUserMenu() {
     int operation;
     cout <<    "╒═════════════════════════════════════════════╤═════════════════════════════════════════════╕\n"
-               "│                                             │                                             │\n"
+               "│             Request Management              │          Information About Flights          │\n"
                "╞═════════════════════════════════════════════╪═════════════════════════════════════════════╡\n"
-               "│                                        [11] │                                        [21] │\n"
-               "│                                        [12] │                                        [22] │\n"
-               "│                                        [13] │                                        [23] │\n"
-               "╞═════════════════════════════════════════════╡                                        [24] │\n"
-               "│                Other operations             │                                        [25] │\n"
-               "╞═════════════════════════════════════════════╡                                             │\n"
+               "│   Best way to fly between countries    [11] │   Number of flights stating from a     [21] │\n"
+               "│                                        [12] │ certain departure airport                   │\n"
+               "│                                        [13] │   Number of different airlines         [22] │\n"
+               "│                                        [14] │   Number of arrivals                   [23] │\n"
+               "╞═════════════════════════════════════════════╡   Number of different countries        [24] │\n"
+               "│                Other operations             │   With a certain number of flights,    [25] │\n"
+               "╞═════════════════════════════════════════════╡ how far can you go                          │\n"
                "│  Exit                                  [31] │                                             │\n"
                "╘═════════════════════════════════════════════╧═════════════════════════════════════════════╛\n"
                "                                                                                             \n";
@@ -37,6 +38,8 @@ bool App::printUserMenu() {
         case 12:
             break;
         case 13:
+            break;
+        case 14:
             break;
         case 21:
             break;
