@@ -2,14 +2,14 @@
 #include <iostream>
 #include <queue>
 
-void Flights::addEdge(string source, string target, string airline) {
-    if(sources.find(source)==sources.end()){
-        sources[source]={};
+void Flights::addEdge(Airport source, Airport target, string airline) {
+    if(sources.find(source.getCode())==sources.end()){
+        sources[source.getCode()]={};
     }
-    if(sources.find(target)==sources.end()){
-        sources[target]={};
+    if(sources.find(target.getCode())==sources.end()){
+        sources[target.getCode()]={};
     }
-    sources[source].targets.push_back({target,airline});
+    sources[source.getCode()].targets.push_back({target.getCode(),airline, calculateDistance(source,target)});
 }
 
 void Flights::bfs(string source) {

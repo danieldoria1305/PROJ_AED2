@@ -15,12 +15,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o.d"
   "CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.o"
   "CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.o.d"
-  "CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o"
-  "CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o.d"
   "CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o"
   "CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o.d"
   "CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o"
   "CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o.d"
+  "CMakeFiles/TrabalhoAED2.dir/main.cpp.o"
+  "CMakeFiles/TrabalhoAED2.dir/main.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

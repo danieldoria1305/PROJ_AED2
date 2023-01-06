@@ -8,7 +8,7 @@
 #include <cmath>
 
 int Gestao::getDistance(string a, string b) {
-    return flights.distance(a,b);
+    return flights_.distance(a,b);
 }
 
 void Gestao::readFileAirlines() {  // INCOMPLETE
@@ -56,6 +56,7 @@ void Gestao::readFileAirports() {  // INCOMPLETE
         auto it=countries_.find(AirportCountry);
         Airport ap(AirportCode,AirportName,stof(AirportLongitude),stof(AirportLatitude));
         it->second.addAirport(ap,AirportCity);
+        airports_[AirportCode]=ap;
     }
 }
 
@@ -70,7 +71,9 @@ void Gestao::readFileFlights() {  // INCOMPLETE
         getline(inputString, FlightSource, ',');
         getline(inputString, FlightTarget, ',');
         getline(inputString, FlightAirline, '\r');
-        this->flights.addEdge(FlightSource,FlightTarget,FlightAirline);
+        auto source=airports_.find(FlightSource);
+        auto target=airports_.find(FlightTarget);
+        flights_.addEdge(source->second,target->second,FlightAirline);
     }
 }
 

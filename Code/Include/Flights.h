@@ -6,12 +6,13 @@
 #include "Airline.h"
 #include <iostream>
 #include <unordered_map>
+#include <cmath>
 
 class Flights {
     struct Target {
         string target;
         string airline;
-        float distance;
+        double distance;
     };
 
     struct Source {
@@ -21,8 +22,9 @@ class Flights {
     };
 
     unordered_map<string,Source> sources; // Unordered map of Airports being represented
+
 public:
-    void addEdge(string source, string target, string airline);
+    void addEdge(Airport source, Airport target, string airline);
     void bfs(string source);
     int distance(string s, string t);
     double calculateDistance(Airport airport1, Airport airport2); // Calculates the distance between two coordinates using the Haversine formula

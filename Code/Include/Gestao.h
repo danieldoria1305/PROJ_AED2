@@ -12,6 +12,7 @@
 using namespace std;
 
 typedef unordered_map<string,Country> M_country;
+typedef unordered_map<string,Airport> M_airport;
 
 class Gestao {
 public:
@@ -22,7 +23,8 @@ public:
 
 private:
     M_country countries_; // Unordered_map of countries
-    Flights flights; // Graph of flights
+    Flights flights_; // Graph of flights
+    M_airport airports_;
 };
 
 
