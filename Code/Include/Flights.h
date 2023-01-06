@@ -24,6 +24,7 @@ public:
     void addEdge(string source, string target, string airline);
     void bfs(string source);
     int distance(string s, string t);
+    double calculateDistance(Airport airport1, Airport airport2); // Calculates the distance between two coordinates using the Haversine formula
 };
 
 
