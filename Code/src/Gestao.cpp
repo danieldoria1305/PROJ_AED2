@@ -77,5 +77,9 @@ void Gestao::readFileFlights() {  // INCOMPLETE
     }
 }
 
+M_airport Gestao::getAirports() const {
+    return airports_;
+}
+
 
 

@@ -20,6 +20,7 @@ public:
     void readFileAirports(); // Reads the airports.csv file
     void readFileFlights(); // Reads the flights.csv file
     int getDistance(string a,string b);
+    M_airport getAirports() const;
 
 private:
     M_country countries_; // Unordered_map of countries

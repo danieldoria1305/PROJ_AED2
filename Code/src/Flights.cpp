@@ -56,3 +56,17 @@ double Flights::calculateDistance(Airport airport1, Airport airport2) {
     double c = 2 * asin(sqrt(a));
     return rad * c;
 }
+
+//I want a function that returns how many flights are there starting from a given airport
+
+int Flights::getFlightsFromAirport(string airportCode) {
+    int count = 0;
+    for (auto& s:sources){
+        for (auto& t:s.second.targets){
+            if (t.target == airportCode){
+                count++;
+            }
+        }
+    }
+    return count;
+}

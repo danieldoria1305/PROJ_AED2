@@ -43,6 +43,7 @@ bool App::printUserMenu() {
         case 14:
             break;
         case 21:
+            printNumberOfFlights();
             break;
         case 22:
             break;
@@ -59,4 +60,34 @@ bool App::printUserMenu() {
             return false;
     }
     return true;
+}
+
+void App::printNumberOfFlights() {
+    string airportCode;
+    cout <<  "╒═════════════════════════════════════════════╕\n"
+             "│                Airport Code                 │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Write the airport code to see the number   │\n"
+             "│ of flights                                  │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Return                                [1]  │\n"
+             "╘═════════════════════════════════════════════╛\n"
+             "                                               \n";
+    cin >> airportCode;
+    cin.ignore();
+    if(airportCode == "1"){
+        return;
+    }
+    Airport airport;
+    bool b = false;
+    for (auto it : gestao.getAirports().find(airport.getCode())){
+        if(it == airportCode){
+            airport = it;
+            b = true;
+            cout << "╒═════════════════════════════════════════════╕\n"
+                    "│     The number of flights starting from     │\n";
+            cout << "│    " << airport << " is " << getFlightsFromAirport(airportCode) << "│\n"
+                    "╘═════════════════════════════════════════════╛\n";
+        }
+    }
 }

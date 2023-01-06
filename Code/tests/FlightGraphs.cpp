@@ -7,7 +7,7 @@
 // Some Example Graphs
 // ----------------------------------------------------------
 
-Flights FlightGraphs::graph1() {
+/*Flights FlightGraphs::graph1() {
     Flights g;
     g.addEdge("1", "2","x");
     g.addEdge("1", "3","x");
@@ -19,4 +19,4 @@ Flights FlightGraphs::graph1() {
     g.addEdge("6", "9","x");
     g.addEdge("7", "8","x");
     return g;
-}
+}*/
