@@ -11,6 +11,8 @@ public:
     void printNumberOfAirlines(); // Prints the number of different airlines
 private:
     Gestao gestao;
+
+    void printBestWayToFly();
 };
 
 
