@@ -10,28 +10,18 @@ string Country::getName() const {  // Returns the name of the country
     return name_;
 }
 
-M_city Country::getCities() const { // Returns the list of cities in the country
+unordered_set<string> Country::getCities() const { // Returns the list of cities in the country
     return cities_;
 }
 
-list<Airline> Country::getAirlines() const { // Returns the list of airlines in the country
+unordered_set<string> Country::getAirlines() const { // Returns the list of airlines in the country
     return airlines_;
 }
 
-void Country::addAirline(const Airline &al) {
-    airlines_.push_back(al);
+void Country::addAirline(string al) {
+    airlines_.insert(al);
 }
 
-void Country::addCity(const City &c) {
-    cities_[c.getName()]=c;
-}
-
-void Country::addAirport(const Airport &ap, string city) {
-    auto it = cities_.find(city);
-    if(it==cities_.end()){
-        City c(city);
-        addCity(c);
-    }
-    it = cities_.find(city);
-    it->second.addAirport(ap);
+void Country::addCity(string c) {
+    cities_.insert(c);
 }

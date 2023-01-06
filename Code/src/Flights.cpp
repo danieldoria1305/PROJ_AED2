@@ -69,6 +69,7 @@ vector<string> Flights::dijkstra(string src, string dest) {
         u=prev[u];
     }
     result.push_back(src);
+    reverse(result.begin(),result.end());
     return result;
 }
 

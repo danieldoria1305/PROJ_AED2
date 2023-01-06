@@ -29,8 +29,9 @@ void Gestao::readFileAirlines() {  // INCOMPLETE
             countries_[AirlineCountry]=c;
         }
         auto it=countries_.find(AirlineCountry);
-        Airline al(AirlineCode,AirlineName,AirlineCallSign);
-        it->second.addAirline(al);
+        Airline al(AirlineCode,AirlineName,AirlineCallSign,AirlineCountry);
+        airlines_[AirlineCode]=al;
+        it->second.addAirline(AirlineCode);
     }
 }
 
@@ -50,13 +51,19 @@ void Gestao::readFileAirports() {  // INCOMPLETE
         getline(inputString, AirportLatitude, ',');
         getline(inputString, AirportLongitude, '\r');
         if(countries_.find(AirportCountry)==countries_.end()){
-            Country c(AirportCountry);
-            countries_[AirportCountry]=c;
+            Country coutry_(AirportCountry);
+            countries_[AirportCountry]=coutry_;
         }
         auto it=countries_.find(AirportCountry);
-        Airport ap(AirportCode,AirportName,stof(AirportLongitude),stof(AirportLatitude));
-        it->second.addAirport(ap,AirportCity);
+        Airport ap(AirportCode,AirportName,AirportCity,AirportCountry,stof(AirportLongitude),stof(AirportLatitude));
+        it->second.addCity(AirportCity);
         airports_[AirportCode]=ap;
+        if(cities_.find(AirportCity)==cities_.end()){
+            City city(AirportCity);
+            cities_[AirportCity]=city;
+        }
+        auto itc=cities_.find(AirportCity);
+        itc->second.addAirport(AirportCode);
     }
 }
 

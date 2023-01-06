@@ -11,10 +11,10 @@ string City::getName() const{
     return name_;
 }
 
-M_airport City::getAirports() const{
+unordered_set<string> City::getAirports() const{
     return airports_;
 }
 
-void City::addAirport(const Airport &ap) {
-    airports_[ap.getCode()]=ap;
+void City::addAirport(string ap) {
+    airports_.insert(ap);
 }
