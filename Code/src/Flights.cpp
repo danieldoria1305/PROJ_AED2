@@ -1,6 +1,8 @@
 #include "../Include/Flights.h"
 #include <iostream>
 #include <queue>
+#include <climits>
+#include <algorithm>
 
 void Flights::addEdge(Airport source, Airport target, string airline) {
     if(sources.find(source.getCode())==sources.end()){
@@ -34,9 +36,46 @@ void Flights::bfs(string source) {
     }
 }
 
-int Flights::distance(string s, string t){
-    bfs(s);
-    return sources[t].dist;
+vector<vector<string>> Flights::dijkstra(string src, string dest) {
+    priority_queue<pair<int, string>, vector<pair<int, string>>, greater<pair<int, string>>> pq;
+    unordered_map<string, vector<string>> paths;
+    unordered_map<string, string> prev;
+
+    for (auto& pair: sources) {
+        pair.second.dist=INT_MAX;
+    }
+
+    sources[src].dist = 0;
+    pq.emplace(0, src);
+
+    paths[src] = {src};
+
+    while (!pq.empty()) {
+        string u = pq.top().second;pq.pop();
+        if (u == dest) {
+            break;
+        }
+        for (auto e : sources[u].targets) {
+            string w=e.target;
+            int alt = sources[u].dist + 1;
+            if (alt < sources[w].dist) {
+                sources[w].dist = alt;
+                prev[w] = u;
+                paths[w] = paths[u];
+                paths[w].push_back(w);
+                pq.emplace(alt, w);
+            } else if (alt == sources[w].dist) {
+                paths[w] = paths[u];
+                paths[w].push_back(w);
+            }
+        }
+    }
+
+    vector<vector<string>> result;
+    for (auto p : paths) {
+        result.push_back(p.second);
+    }
+    return result;
 }
 
 double Flights::calculateDistance(Airport airport1, Airport airport2) {
@@ -57,16 +96,6 @@ double Flights::calculateDistance(Airport airport1, Airport airport2) {
     return rad * c;
 }
 
-//I want a function that returns how many flights are there starting from a given airport
-
-int Flights::getFlightsFromAirport(string airportCode) {
-    int count = 0;
-    for (auto& s:sources){
-        for (auto& t:s.second.targets){
-            if (t.target == airportCode){
-                count++;
-            }
-        }
-    }
-    return count;
+unordered_map<string, Flights::Source> Flights::getSources() {
+    return sources;
 }

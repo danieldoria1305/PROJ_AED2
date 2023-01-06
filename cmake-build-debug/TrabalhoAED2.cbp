@@ -349,6 +349,9 @@
 		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/src/Gestao.cpp">
 			<Option target="TrabalhoAED2"/>
 		</Unit>
+		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/src/main.cpp">
+			<Option target="TrabalhoAED2"/>
+		</Unit>
 		<Unit filename="/home/pedropassos/TrabalhoAED2/Code/tests/FlightGraphs.cpp">
 			<Option target="TrabalhoAED2"/>
 		</Unit>
@@ -369,9 +372,6 @@
 		</Unit>
 		<Unit filename="/home/pedropassos/TrabalhoAED2/lib/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
-		</Unit>
-		<Unit filename="/home/pedropassos/TrabalhoAED2/main.cpp">
-			<Option target="TrabalhoAED2"/>
 		</Unit>
 		<Unit filename="/home/pedropassos/TrabalhoAED2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

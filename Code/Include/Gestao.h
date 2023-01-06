@@ -19,9 +19,9 @@ public:
     void readFileAirlines(); // Reads the airlines.csv file
     void readFileAirports(); // Reads the airports.csv file
     void readFileFlights(); // Reads the flights.csv file
-    int getDistance(string a,string b);
+    vector<vector<string>> getDistance(string a, string b);
     M_airport getAirports() const;
-
+    Flights getFlights() const;
 private:
     M_country countries_; // Unordered_map of countries
     Flights flights_; // Graph of flights

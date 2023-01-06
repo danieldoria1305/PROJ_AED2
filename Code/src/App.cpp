@@ -34,6 +34,17 @@ bool App::printUserMenu() {
     cin.ignore();
     switch(operation){
         case 11:{
+            string a,b;
+            cin >> a;
+            cin >> b;
+            vector<vector<string>> v=gestao.getDistance(a,b);
+            for(vector<string> vs:v){
+                for(string s:vs){
+                    cout << s << " ";
+                }
+                cout << endl;
+            }
+            cout << endl;
             break;
         }
         case 12:
@@ -80,14 +91,11 @@ void App::printNumberOfFlights() {
     }
     Airport airport;
     bool b = false;
-    for (auto it : gestao.getAirports().find(airport.getCode())){
-        if(it == airportCode){
-            airport = it;
-            b = true;
-            cout << "╒═════════════════════════════════════════════╕\n"
-                    "│     The number of flights starting from     │\n";
-            cout << "│    " << airport << " is " << getFlightsFromAirport(airportCode) << "│\n"
-                    "╘═════════════════════════════════════════════╛\n";
-        }
-    }
+    auto it=gestao.getAirports().find(airportCode);
+    airport = it->second;
+    b = true;
+    cout << "╒═════════════════════════════════════════════╕\n"
+            "│     The number of flights starting from     │\n";
+    cout << "    " << airport.getCode() << " is " << gestao.getFlights().getSources()[airport.getCode()].targets.size() << "\n" <<
+            "╘═════════════════════════════════════════════╛\n";
 }

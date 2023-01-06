@@ -394,6 +394,30 @@ Code/src/Gestao.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.s
 .PHONY : Code/src/Gestao.cpp.s
 
+Code/src/main.o: Code/src/main.cpp.o
+.PHONY : Code/src/main.o
+
+# target to build an object file
+Code/src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o
+.PHONY : Code/src/main.cpp.o
+
+Code/src/main.i: Code/src/main.cpp.i
+.PHONY : Code/src/main.i
+
+# target to preprocess a source file
+Code/src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.i
+.PHONY : Code/src/main.cpp.i
+
+Code/src/main.s: Code/src/main.cpp.s
+.PHONY : Code/src/main.s
+
+# target to generate assembly for a file
+Code/src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.s
+.PHONY : Code/src/main.cpp.s
+
 Code/tests/FlightGraphs.o: Code/tests/FlightGraphs.cpp.o
 .PHONY : Code/tests/FlightGraphs.o
 
@@ -442,30 +466,6 @@ Code/tests/tests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.s
 .PHONY : Code/tests/tests.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrabalhoAED2.dir/build.make CMakeFiles/TrabalhoAED2.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -504,15 +504,15 @@ help:
 	@echo "... Code/src/Gestao.o"
 	@echo "... Code/src/Gestao.i"
 	@echo "... Code/src/Gestao.s"
+	@echo "... Code/src/main.o"
+	@echo "... Code/src/main.i"
+	@echo "... Code/src/main.s"
 	@echo "... Code/tests/FlightGraphs.o"
 	@echo "... Code/tests/FlightGraphs.i"
 	@echo "... Code/tests/FlightGraphs.s"
 	@echo "... Code/tests/tests.o"
 	@echo "... Code/tests/tests.i"
 	@echo "... Code/tests/tests.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

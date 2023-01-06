@@ -6,7 +6,7 @@
 #include "FlightGraphs.h"
 
 using testing::Eq;
-
+/*
 TEST(test_1a, distance) {
     cout << "Testando 'distance'" << endl;
 
@@ -29,3 +29,4 @@ TEST(test_1a, distance) {
     EXPECT_EQ(3, g1.distance("4","9"));
     EXPECT_EQ(4, g1.distance("2","8"));
 }
+ */

@@ -7,8 +7,8 @@
 #include <cstring>
 #include <cmath>
 
-int Gestao::getDistance(string a, string b) {
-    return flights_.distance(a,b);
+vector<vector<string>> Gestao::getDistance(string a, string b) {
+    return flights_.dijkstra(a,b);
 }
 
 void Gestao::readFileAirlines() {  // INCOMPLETE
@@ -79,6 +79,10 @@ void Gestao::readFileFlights() {  // INCOMPLETE
 
 M_airport Gestao::getAirports() const {
     return airports_;
+}
+
+Flights Gestao::getFlights() const {
+    return flights_;
 }
 
 

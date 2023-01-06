@@ -26,8 +26,9 @@ class Flights {
 public:
     void addEdge(Airport source, Airport target, string airline);
     void bfs(string source);
-    int distance(string s, string t);
     double calculateDistance(Airport airport1, Airport airport2); // Calculates the distance between two coordinates using the Haversine formula
+    vector<vector<string>> dijkstra(string src, string dest);
+    unordered_map<string,Source> getSources();
 };
 
 
