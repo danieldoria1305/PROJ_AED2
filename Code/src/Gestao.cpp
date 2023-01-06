@@ -92,5 +92,9 @@ Flights Gestao::getFlights() const {
     return flights_;
 }
 
+M_airline Gestao::getAirlines() const {
+    return airlines_;
+}
+
 
 

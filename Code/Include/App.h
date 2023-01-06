@@ -8,6 +8,7 @@ public:
     void start(); // Starts the application
     bool printUserMenu(); // Prints the User Menu/Interface
     void printNumberOfFlights(); // Prints the number of flights starting from a certain airport
+    void printNumberOfAirlines(); // Prints the number of different airlines
 private:
     Gestao gestao;
 };

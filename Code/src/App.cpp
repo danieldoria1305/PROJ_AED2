@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "../Include/App.h"
 
 
@@ -54,6 +55,7 @@ bool App::printUserMenu() {
             printNumberOfFlights();
             break;
         case 22:
+            printNumberOfAirlines();
             break;
         case 23:
             break;
@@ -87,12 +89,50 @@ void App::printNumberOfFlights() {
         return;
     }
     Airport airport;
-    bool b = false;
     auto it=gestao.getAirports().find(airportCode);
     airport = it->second;
-    b = true;
     cout << "╒═════════════════════════════════════════════╕\n"
             "│     The number of flights starting from     │\n";
     cout << "    " << airport.getCode() << " is " << gestao.getFlights().getSources()[airport.getCode()].targets.size() << "\n" <<
             "╘═════════════════════════════════════════════╛\n";
+    cin.ignore();
+}
+
+void App::printNumberOfAirlines() {
+    string airportCode;
+    cout <<  "╒═════════════════════════════════════════════╕\n"
+             "│                Airport Code                 │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Write the airport code to see the number   │\n"
+             "│ of flights                                  │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Return                                [1]  │\n"
+             "╘═════════════════════════════════════════════╛\n"
+             "                                               \n";
+    cin >> airportCode;
+    cin.ignore();
+    if(airportCode == "1"){
+        return;
+    }
+    Airport airport;
+    auto it = gestao.getAirports().find(airportCode);
+    airport = it->second;
+    vector<string> airlines;
+    int count = 0;
+    auto aux = gestao.getFlights().getSources()[airport.getCode()].targets;
+    for(auto& i : aux) {
+        if(find(airlines.begin(), airlines.end(), gestao.getAirlines()[i.airline].getName()) == airlines.end()) {
+            count++;
+            airlines.push_back(gestao.getAirlines()[i.airline].getName());
+        }
+    }
+    sort(airlines.begin(), airlines.end());
+    cout << "╒═════════════════════════════════════════════╕\n"
+            "     The number of airlines:" << count <<"\n";
+    for(auto i : airlines) {
+        cout << "╞═════════════════════════════════════════════╡\n"
+                "|   " << i << "\n";
+    }
+    cout << "╘═════════════════════════════════════════════╛\n"
+            "                                               \n";
 }

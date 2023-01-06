@@ -24,6 +24,8 @@ public:
     vector<string> getDistance(string a, string b);
     M_airport getAirports() const;
     Flights getFlights() const;
+    M_airline getAirlines() const;
+
 private:
     M_country countries_; // Unordered_map of countries
     M_city cities_;
