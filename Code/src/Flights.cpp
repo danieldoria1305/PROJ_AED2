@@ -36,9 +36,8 @@ void Flights::bfs(string source) {
     }
 }
 
-vector<vector<string>> Flights::dijkstra(string src, string dest) {
+vector<string> Flights::dijkstra(string src, string dest) {
     priority_queue<pair<int, string>, vector<pair<int, string>>, greater<pair<int, string>>> pq;
-    unordered_map<string, vector<string>> paths;
     unordered_map<string, string> prev;
 
     for (auto& pair: sources) {
@@ -47,8 +46,6 @@ vector<vector<string>> Flights::dijkstra(string src, string dest) {
 
     sources[src].dist = 0;
     pq.emplace(0, src);
-
-    paths[src] = {src};
 
     while (!pq.empty()) {
         string u = pq.top().second;pq.pop();
@@ -61,20 +58,17 @@ vector<vector<string>> Flights::dijkstra(string src, string dest) {
             if (alt < sources[w].dist) {
                 sources[w].dist = alt;
                 prev[w] = u;
-                paths[w] = paths[u];
-                paths[w].push_back(w);
                 pq.emplace(alt, w);
-            } else if (alt == sources[w].dist) {
-                paths[w] = paths[u];
-                paths[w].push_back(w);
             }
         }
     }
-
-    vector<vector<string>> result;
-    for (auto p : paths) {
-        result.push_back(p.second);
+    vector<string> result;
+    string u=dest;
+    while(u!=src) {
+        result.push_back(u);
+        u=prev[u];
     }
+    result.push_back(src);
     return result;
 }
 

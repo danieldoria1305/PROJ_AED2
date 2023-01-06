@@ -37,12 +37,9 @@ bool App::printUserMenu() {
             string a,b;
             cin >> a;
             cin >> b;
-            vector<vector<string>> v=gestao.getDistance(a,b);
-            for(vector<string> vs:v){
-                for(string s:vs){
-                    cout << s << " ";
-                }
-                cout << endl;
+            vector<string> v=gestao.getDistance(a,b);
+            for(string s:v){
+                cout << s << " ";
             }
             cout << endl;
             break;

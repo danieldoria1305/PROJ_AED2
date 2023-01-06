@@ -7,7 +7,7 @@
 #include <cstring>
 #include <cmath>
 
-vector<vector<string>> Gestao::getDistance(string a, string b) {
+vector<string> Gestao::getDistance(string a, string b) {
     return flights_.dijkstra(a,b);
 }
 

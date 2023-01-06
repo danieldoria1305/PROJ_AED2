@@ -19,7 +19,7 @@ public:
     void readFileAirlines(); // Reads the airlines.csv file
     void readFileAirports(); // Reads the airports.csv file
     void readFileFlights(); // Reads the flights.csv file
-    vector<vector<string>> getDistance(string a, string b);
+    vector<string> getDistance(string a, string b);
     M_airport getAirports() const;
     Flights getFlights() const;
 private:
