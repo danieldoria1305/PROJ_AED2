@@ -11,6 +11,7 @@ class Flights {
     struct Target {
         string target;
         string airline;
+        float distance;
     };
 
     struct Source {
