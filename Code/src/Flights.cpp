@@ -2,36 +2,39 @@
 #include <iostream>
 #include <queue>
 
-Flights::Flights() {}
-
 void Flights::addEdge(string source, string target, string airline) {
     if(sources.find(source)==sources.end()){
         sources[source]={};
     }
-    auto it=sources.find(source);
-    Target t=Target();
-    it->second.targets.push_back({target,airline});
+    if(sources.find(target)==sources.end()){
+        sources[target]={};
+    }
+    sources[source].targets.push_back({target,airline});
 }
 
 void Flights::bfs(string source) {
     for (auto& s:sources){
         s.second.visited=false;
+        s.second.dist=-1;
     }
     queue<string> q;
     q.push(source);
-    auto it=sources.find(source);
-    it->second.visited = true;
+    sources[source].visited = true;
+    sources[source].dist=0;
     while (!q.empty()) {
         string u = q.front(); q.pop();
-        it=sources.find(u);
-        for (auto e : it->second.targets) {
+        for (auto e : sources[u].targets) {
             string w = e.target;
-            auto it2=sources.find(u);
-            if (!it2->second.visited) {
+            if (!sources[w].visited) {
                 q.push(w);
-                it2=sources.find(w);
-                it2->second.visited = true;
+                sources[w].dist=sources[u].dist+1;
+                sources[w].visited = true;
             }
         }
     }
+}
+
+int Flights::distance(string s, string t){
+    bfs(s);
+    return sources[t].dist;
 }

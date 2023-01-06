@@ -111,19 +111,19 @@ CMakeFiles/TrabalhoAED2.dir/Code/src/City.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoAED2.dir/Code/src/City.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pedropassos/TrabalhoAED2/Code/src/City.cpp -o CMakeFiles/TrabalhoAED2.dir/Code/src/City.cpp.s
 
-CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o: CMakeFiles/TrabalhoAED2.dir/flags.make
-CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o: /home/pedropassos/TrabalhoAED2/Code/src/Flight.cpp
-CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o: CMakeFiles/TrabalhoAED2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o -MF CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o.d -o CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o -c /home/pedropassos/TrabalhoAED2/Code/src/Flight.cpp
+CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o: CMakeFiles/TrabalhoAED2.dir/flags.make
+CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o: /home/pedropassos/TrabalhoAED2/Code/src/Flights.cpp
+CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o: CMakeFiles/TrabalhoAED2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o -MF CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o.d -o CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o -c /home/pedropassos/TrabalhoAED2/Code/src/Flights.cpp
 
-CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pedropassos/TrabalhoAED2/Code/src/Flight.cpp > CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.i
+CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pedropassos/TrabalhoAED2/Code/src/Flights.cpp > CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.i
 
-CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pedropassos/TrabalhoAED2/Code/src/Flight.cpp -o CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.s
+CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pedropassos/TrabalhoAED2/Code/src/Flights.cpp -o CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.s
 
 CMakeFiles/TrabalhoAED2.dir/Code/src/Airline.cpp.o: CMakeFiles/TrabalhoAED2.dir/flags.make
 CMakeFiles/TrabalhoAED2.dir/Code/src/Airline.cpp.o: /home/pedropassos/TrabalhoAED2/Code/src/Airline.cpp
@@ -167,10 +167,38 @@ CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pedropassos/TrabalhoAED2/Code/src/Gestao.cpp -o CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.s
 
+CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o: CMakeFiles/TrabalhoAED2.dir/flags.make
+CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o: /home/pedropassos/TrabalhoAED2/Code/tests/tests.cpp
+CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o: CMakeFiles/TrabalhoAED2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o -MF CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o.d -o CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o -c /home/pedropassos/TrabalhoAED2/Code/tests/tests.cpp
+
+CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pedropassos/TrabalhoAED2/Code/tests/tests.cpp > CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.i
+
+CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pedropassos/TrabalhoAED2/Code/tests/tests.cpp -o CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.s
+
+CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o: CMakeFiles/TrabalhoAED2.dir/flags.make
+CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o: /home/pedropassos/TrabalhoAED2/Code/tests/FlightGraphs.cpp
+CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o: CMakeFiles/TrabalhoAED2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o -MF CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o.d -o CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o -c /home/pedropassos/TrabalhoAED2/Code/tests/FlightGraphs.cpp
+
+CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pedropassos/TrabalhoAED2/Code/tests/FlightGraphs.cpp > CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.i
+
+CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pedropassos/TrabalhoAED2/Code/tests/FlightGraphs.cpp -o CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.s
+
 CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o: CMakeFiles/TrabalhoAED2.dir/flags.make
 CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o: /home/pedropassos/TrabalhoAED2/Code/src/main.cpp
 CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o: CMakeFiles/TrabalhoAED2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o -MF CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o.d -o CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o -c /home/pedropassos/TrabalhoAED2/Code/src/main.cpp
 
 CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.i: cmake_force
@@ -186,30 +214,37 @@ TrabalhoAED2_OBJECTS = \
 "CMakeFiles/TrabalhoAED2.dir/Code/src/Country.cpp.o" \
 "CMakeFiles/TrabalhoAED2.dir/Code/src/Airport.cpp.o" \
 "CMakeFiles/TrabalhoAED2.dir/Code/src/City.cpp.o" \
-"CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o" \
+"CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o" \
 "CMakeFiles/TrabalhoAED2.dir/Code/src/Airline.cpp.o" \
 "CMakeFiles/TrabalhoAED2.dir/Code/src/App.cpp.o" \
 "CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.o" \
+"CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o" \
+"CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o" \
 "CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o"
 
 # External object files for target TrabalhoAED2
 TrabalhoAED2_EXTERNAL_OBJECTS =
 
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Country.cpp.o
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Airport.cpp.o
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/City.cpp.o
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Flight.cpp.o
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Airline.cpp.o
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/App.cpp.o
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.o
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/build.make
-TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable TrabalhoAED2"
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Country.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Airport.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/City.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Flights.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Airline.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/App.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/Gestao.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/tests/tests.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/tests/FlightGraphs.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/Code/src/main.cpp.o
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/build.make
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: lib/libgtestd.a
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: lib/libgtest_maind.a
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: lib/libgtestd.a
+/home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2: CMakeFiles/TrabalhoAED2.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable /home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TrabalhoAED2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/TrabalhoAED2.dir/build: TrabalhoAED2
+CMakeFiles/TrabalhoAED2.dir/build: /home/pedropassos/TrabalhoAED2/Tests/TrabalhoAED2
 .PHONY : CMakeFiles/TrabalhoAED2.dir/build
 
 CMakeFiles/TrabalhoAED2.dir/clean:

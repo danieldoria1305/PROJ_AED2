@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/pedropassos/TrabalhoAED2/lib/googletest-master/googlemock/include -isystem /home/pedropassos/TrabalhoAED2/lib/googletest-master/googletest/include -isystem /home/pedropassos/TrabalhoAED2/lib/googletest-master/googletest
 
-CXX_FLAGS = -g -fdiagnostics-color=always -std=gnu++14
+CXX_FLAGS = -g -fdiagnostics-color=always -std=gnu++11
 

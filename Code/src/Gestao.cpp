@@ -7,6 +7,10 @@
 #include <cstring>
 #include <cmath>
 
+int Gestao::getDistance(string a, string b) {
+    return flights.distance(a,b);
+}
+
 void Gestao::readFileAirlines() {  // INCOMPLETE
     std::ifstream airlines;
     airlines.open("../Code/dataset/airlines.csv");

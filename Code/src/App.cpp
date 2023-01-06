@@ -33,8 +33,9 @@ bool App::printUserMenu() {
     cin >> operation;
     cin.ignore();
     switch(operation){
-        case 11:
+        case 11:{
             break;
+        }
         case 12:
             break;
         case 13:

@@ -447,3 +447,37 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_875e2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_875e2.dir/build.make CMakeFiles/cmTC_875e2.dir/build
+gmake[1]: Entering directory '/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_875e2.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_875e2.dir/src.c.o -c /home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_875e2
+/snap/clion/219/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_875e2.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_875e2.dir/src.c.o -o cmTC_875e2 
+gmake[1]: Leaving directory '/home/pedropassos/TrabalhoAED2/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
