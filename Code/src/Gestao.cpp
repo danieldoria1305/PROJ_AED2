@@ -7,8 +7,8 @@
 #include <cstring>
 #include <cmath>
 
-vector<string> Gestao::getDistance(string a, string b) {
-    return flights_.dijkstra(a,b);
+vector<string> Gestao::getDistance(string a, string b,set<string> airlines) {
+    return flights_.dijkstra(a, b, airlines);
 }
 
 vector<pair<string, double>> Gestao::getHowFar(int i, string src){
@@ -102,6 +102,10 @@ M_airline Gestao::getAirlines() const {
 
 M_country Gestao::getCountries() const {
     return countries_;
+}
+
+M_city Gestao::getCities() const {
+    return cities_;
 }
 
 

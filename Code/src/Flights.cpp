@@ -3,6 +3,7 @@
 #include <queue>
 #include <climits>
 #include <algorithm>
+#include <set>
 
 void Flights::addEdge(Airport source, Airport target, string airline) {
     if(sources.find(source.getCode())==sources.end()){
@@ -38,7 +39,7 @@ void Flights::bfs(string source) {
     }
 }
 
-vector<string> Flights::dijkstra(string src, string dest) {
+vector<string> Flights::dijkstra(string src, string dest, std::set<string> airlines) {
     priority_queue<pair<int, string>, vector<pair<int, string>>, greater<pair<int, string>>> pq;
     unordered_map<string, string> prev;
 
@@ -48,23 +49,31 @@ vector<string> Flights::dijkstra(string src, string dest) {
 
     sources[src].dist = 0;
     pq.emplace(0, src);
+    bool b=false;
 
     while (!pq.empty()) {
         string u = pq.top().second;pq.pop();
         if (u == dest) {
+            b=true;
             break;
         }
         for (auto e : sources[u].targets) {
-            string w=e.target;
-            int alt = sources[u].dist + 1;
-            if (alt < sources[w].dist) {
-                sources[w].dist = alt;
-                prev[w] = u;
-                pq.emplace(alt, w);
+            if(airlines.empty() or airlines.find(e.airline)!=airlines.end()) {
+                string w = e.target;
+                int alt = sources[u].dist + 1;
+                if (alt < sources[w].dist) {
+                    sources[w].dist = alt;
+                    prev[w] = u;
+                    pq.emplace(alt, w);
+                }
             }
         }
     }
+
     vector<string> result;
+    if(!b){
+        return result;
+    }
     string u=dest;
     while(u!=src) {
         result.push_back(u);

@@ -21,11 +21,12 @@ public:
     void readFileAirlines(); // Reads the airlines.csv file
     void readFileAirports(); // Reads the airports.csv file
     void readFileFlights(); // Reads the flights.csv file
-    vector<string> getDistance(string a, string b);
+    vector<string> getDistance(string a, string b,set<string> airlines);
     M_airport getAirports() const;
     Flights getFlights() const;
     M_airline getAirlines() const;
     M_country getCountries() const;
+    M_city getCities() const;
     vector<pair<string,double>> getHowFar(int i,string src);
 private:
     M_country countries_; // Unordered_map of countries

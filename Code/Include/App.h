@@ -11,12 +11,14 @@ public:
     void printNumberOfAirlines(); // Prints the number of different airlines
     void printNumberOfArrivals(); // Prints the number of arrivals
     void printNumberOfCountries(); // Prints the number of countries
+    void printHowFar();
+    void printBestWayToFly();
+    void printAirlinesMenu();
+    void printBestWayToFlyCities();
 private:
     Gestao gestao;
-
-    void printBestWayToFly();
-
-    void printHowFar();
+    set<string> airlines_;
+    string type_;
 };
 
 
