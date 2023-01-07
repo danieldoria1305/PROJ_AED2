@@ -9,6 +9,8 @@ public:
     bool printUserMenu(); // Prints the User Menu/Interface
     void printNumberOfFlights(); // Prints the number of flights starting from a certain airport
     void printNumberOfAirlines(); // Prints the number of different airlines
+    void printNumberOfArrivals(); // Prints the number of arrivals
+    void printNumberOfCountries(); // Prints the number of countries
 private:
     Gestao gestao;
 

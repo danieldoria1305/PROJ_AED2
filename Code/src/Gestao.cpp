@@ -100,5 +100,9 @@ M_airline Gestao::getAirlines() const {
     return airlines_;
 }
 
+M_country Gestao::getCountries() const {
+    return countries_;
+}
+
 
 

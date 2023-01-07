@@ -25,6 +25,7 @@ public:
     M_airport getAirports() const;
     Flights getFlights() const;
     M_airline getAirlines() const;
+    M_country getCountries() const;
     vector<pair<string,double>> getHowFar(int i,string src);
 private:
     M_country countries_; // Unordered_map of countries

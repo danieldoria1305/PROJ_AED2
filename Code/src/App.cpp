@@ -51,8 +51,10 @@ bool App::printUserMenu() {
             printNumberOfAirlines();
             break;
         case 23:
+            printNumberOfArrivals();
             break;
         case 24:
+            printNumberOfCountries();
             break;
         case 25:
             printHowFar();
@@ -78,9 +80,7 @@ void App::printNumberOfFlights() {
              "                                               \n";
     cin >> airportCode;
     cin.ignore();
-    if(airportCode == "1"){
-        return;
-    }
+    if(airportCode == "1") return;
     Airport airport;
     auto it=gestao.getAirports().find(airportCode);
     airport = it->second;
@@ -202,11 +202,86 @@ void App::printHowFar(){
     cout << "╒═══════════════════════════════════════════════════════════════════════════════════════╕\n";
     for(auto a:v){
         cout <<" Airport: " << gestao.getAirports().find(a.first)->second.getName() <<
-        "  Distance from one airport to another: "<< a.second << "\n"
+        "  Distance from one airport to another: "<< a.second << " km\n"
         "╞═══════════════════════════════════════════════════════════════════════════════════════╡\n";
     }
     cout << "│  Press enter to return                                                                │\n"
             "╘═══════════════════════════════════════════════════════════════════════════════════════╛\n"
             "                                                                                         \n";
+    cin.ignore();
+}
+
+void App::printNumberOfArrivals() {
+    string airportCode;
+    cout <<  "╒═════════════════════════════════════════════╕\n"
+             "│                Airport Code                 │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Write the airport code to get the number   │\n"
+             "│ of arrivals                                 │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Return                                [1]  │\n"
+             "╘═════════════════════════════════════════════╛\n"
+             "                                               \n";
+    cin >> airportCode;
+    cin.ignore();
+    if(airportCode == "1") return;
+    Airport airport;
+    auto it = gestao.getAirports().find(airportCode);
+    airport = it->second;
+    vector<string> arrivals;
+    vector<string>
+    int count = 0;
+    auto aux = gestao.getFlights().getSources()[airport.getCode()].targets;
+    for(auto& i : aux) {
+        if(find(arrivals.begin(), arrivals.end(), gestao.getAirports()[i.target].getName()) == arrivals.end()) {
+            count++;
+            arrivals.push_back(gestao.getAirports()[i.target].getName());
+        }
+    }
+    sort(arrivals.begin(), arrivals.end());
+    cout << "╒═════════════════════════════════════════════╕\n"
+            "      The number of arrivals : " << count <<"\n";
+    for(auto i : arrivals) {
+        cout << "╞═════════════════════════════════════════════╡\n"
+                "   Airport: " << i << "\n";
+    }
+    cout << "╘═════════════════════════════════════════════╛\n"
+    "                                               \n";
+    cin.ignore();
+}
+
+void App::printNumberOfCountries() {
+    string airportCode;
+    cout <<  "╒═════════════════════════════════════════════╕\n"
+             "│                Airport Code                 │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Write the airport code to get the number   │\n"
+             "│ of arrivals                                 │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Return                                [1]  │\n"
+             "╘═════════════════════════════════════════════╛\n"
+             "                                               \n";
+    cin >> airportCode;
+    cin.ignore();
+    if(airportCode == "1") return;
+    Airport airport;
+    auto it = gestao.getAirports().find(airportCode);
+    airport = it->second;
+    vector<string> countries;
+    vector<string> airlines;
+    int count = 0;
+    auto aux = gestao.getFlights().getSources()[airport.getCode()].targets;
+    for(auto& i : aux) {
+
+    }
+    sort(countries.begin(), countries.end());
+    cout << "╒═════════════════════════════════════════════╕\n"
+            "      The number of countries : " << count <<"\n";
+    for(auto i : countries) {
+        cout << "╞═════════════════════════════════════════════╡\n"
+                "   Country: " << i << "\n";
+    }
+    cout << "╘═════════════════════════════════════════════╛\n"
+            "                                               \n";
     cin.ignore();
 }
