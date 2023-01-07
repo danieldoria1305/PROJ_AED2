@@ -19,6 +19,7 @@ class Flights {
         list<Target> targets;
         bool visited=false;
         int dist;
+        double realDistance;
     };
 
     unordered_map<string,Source> sources; // Unordered map of Airports being represented
@@ -29,6 +30,9 @@ public:
     double calculateDistance(Airport airport1, Airport airport2); // Calculates the distance between two coordinates using the Haversine formula
     vector<string> dijkstra(string src, string dest);
     unordered_map<string,Source> getSources();
+    vector<pair<string, pair<int, double>>> howFar(int i);
+
+    vector<pair<string, double>> howFar(int i, string src);
 };
 
 

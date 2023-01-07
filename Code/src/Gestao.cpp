@@ -11,6 +11,10 @@ vector<string> Gestao::getDistance(string a, string b) {
     return flights_.dijkstra(a,b);
 }
 
+vector<pair<string, double>> Gestao::getHowFar(int i, string src){
+    return flights_.howFar(i,src);
+}
+
 void Gestao::readFileAirlines() {  // INCOMPLETE
     std::ifstream airlines;
     airlines.open("../Code/dataset/airlines.csv");

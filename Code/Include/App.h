@@ -13,6 +13,8 @@ private:
     Gestao gestao;
 
     void printBestWayToFly();
+
+    void printHowFar();
 };
 
 

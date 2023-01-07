@@ -55,12 +55,12 @@ bool App::printUserMenu() {
         case 24:
             break;
         case 25:
+            printHowFar();
             break;
         case 31:
             return false;
         default:
-            cout << "Invalid Operation" << endl;
-            return false;
+            cout << "Invalid Operation..." << endl;
     }
     return true;
 }
@@ -172,5 +172,41 @@ void App::printNumberOfAirlines() {
     }
     cout << "╘═════════════════════════════════════════════╛\n"
             "                                               \n";
+    cin.ignore();
+}
+
+void App::printHowFar(){
+    int number;
+    cout <<  "╒═════════════════════════════════════════════╕\n"
+             "│              Number of flights              │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Write the number of flights                │\n"
+             "╘═════════════════════════════════════════════╛\n"
+             "                                               \n";
+    cin >> number;
+    string src;
+    cout <<  "╒═════════════════════════════════════════════╕\n"
+             "│                Airport Code                 │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Write the airport code                     │\n"
+             "╞═════════════════════════════════════════════╡\n"
+             "│  Return                                [1]  │\n"
+             "╘═════════════════════════════════════════════╛\n"
+             "                                               \n";
+    cin >> src;
+    if(src == "1"){
+        return;
+    }
+    cin.ignore();
+    vector<pair<string,double>> v=gestao.getHowFar(number,src);
+    cout << "╒═══════════════════════════════════════════════════════════════════════════════════════╕\n";
+    for(auto a:v){
+        cout <<" Airport: " << gestao.getAirports().find(a.first)->second.getName() <<
+        "  Distance from one airport to another: "<< a.second << "\n"
+        "╞═══════════════════════════════════════════════════════════════════════════════════════╡\n";
+    }
+    cout << "│  Press enter to return                                                                │\n"
+            "╘═══════════════════════════════════════════════════════════════════════════════════════╛\n"
+            "                                                                                         \n";
     cin.ignore();
 }
