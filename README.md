@@ -11,7 +11,7 @@
     - Mariana Conde
 
 
-- **Doxygen:** To access doxygen click here: ([Doxygen](http://localhost:63342/TrabalhoAED2/Doxygen%20Documentation/html/index.html?_ijt=3d2hbh03kahp48jnv10i3nd9ug&_ij_reload=RELOAD_ON_SAVE))
+- **Doxygen:** To access doxygen click [here](Doxygen%20Documentation%2Fhtml%2Findex.html)
 ## Media
 
 | Flights Representation Gephi                                              |
