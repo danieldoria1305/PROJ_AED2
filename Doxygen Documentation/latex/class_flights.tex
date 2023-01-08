@@ -115,6 +115,9 @@ Breadth First Search algorithm
  \\
 \hline
 \end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Time complexity\+: O(V+E) where V is the number of vertices and E is the number of edges 
+\end{DoxyRemark}
 \mbox{\Hypertarget{class_flights_a1768a23effcc91c7d8a6ea7e2ccf3eb6}\label{class_flights_a1768a23effcc91c7d8a6ea7e2ccf3eb6}} 
 \index{Flights@{Flights}!calculateDistance@{calculateDistance}}
 \index{calculateDistance@{calculateDistance}!Flights@{Flights}}
@@ -218,6 +221,9 @@ Algorithm that finds the shortest path between nodes in the graph of flights
 \begin{DoxyReturn}{Returns}
 Vector containing the shortest path between the two airports 
 \end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Time complexity\+: O(V$^\wedge$2 + n) where V is the number of vertices 
+\end{DoxyRemark}
 \begin{DoxyNote}{Note}
 Utilizes the Dijkstra algorithm to find the shortest path 
 \end{DoxyNote}
@@ -260,6 +266,9 @@ Gets how airports that are at a certain distance from a source airport
 \begin{DoxyReturn}{Returns}
 Vector containing the airports that are at a certain distance from a source airport 
 \end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Time complexity\+: O(\mbox{\hyperlink{class_flights_a4cb38d3c2c1f00b34e75069a904eafe7}{bfs()}}+V) where V is the number of vertices and \mbox{\hyperlink{class_flights_a4cb38d3c2c1f00b34e75069a904eafe7}{bfs()}} is the time complexity of the bfs algorithm 
+\end{DoxyRemark}
 \begin{DoxyNote}{Note}
 Utilizes the bfs algorithm to find the airports that are at a certain distance from a source airport 
 \end{DoxyNote}
