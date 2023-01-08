@@ -1,6 +1,4 @@
-//
-// Created by pedropassos on 03-01-2023.
-//
+
 
 #include "../Include/App.h"
 
