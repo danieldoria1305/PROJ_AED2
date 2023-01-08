@@ -1,0 +1,151 @@
+\hypertarget{class_app}{}\doxysection{App Class Reference}
+\label{class_app}\index{App@{App}}
+
+
+This class is the main class of the program. It is responsible for the user interface.  
+
+
+
+
+{\ttfamily \#include $<$App.\+h$>$}
+
+
+
+Collaboration diagram for App\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_app_a45e80958bad2ae75a2a152028a66021c}\label{class_app_a45e80958bad2ae75a2a152028a66021c}} 
+void {\bfseries start} ()
+\begin{DoxyCompactList}\small\item\em Starts the program. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_app_a6052bc3ebf5474a27dd9fc57a8d54735}{print\+User\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_app_aa0c08652c17799f2434abcb39b7d6e2e}{print\+Number\+Of\+Flights}} ()
+\begin{DoxyCompactList}\small\item\em Asks the user for the airport code and prints the number of flights departing from said airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_app_ab7cea7e380fee8259a48b619bf62d718}{print\+Number\+Of\+Airlines}} ()
+\begin{DoxyCompactList}\small\item\em Asks the user for the airport code and prints the number of different airlines that fly from said airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_app_acc1ca8c356a3faaedce3fe5c2bd67031}{print\+Number\+Of\+Arrivals}} ()
+\begin{DoxyCompactList}\small\item\em Asks the user for the airport code and prints the number of arrivals to said airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_app_a777dfb1170160ab0607929e1263f0500}{print\+Number\+Of\+Countries}} ()
+\begin{DoxyCompactList}\small\item\em Asks the user for the airport code and prints the number of countries that the user can fly to from said airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_app_a7865b115e70831893a2bb3fbdd0272ad}{print\+How\+Far}} ()
+\begin{DoxyCompactList}\small\item\em Asks the user for the two airport codes and prints the distance between them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_app_a9b481d3ed7fa3a01ab064c6368d9090d}{print\+Best\+Way\+To\+Fly}} ()
+\begin{DoxyCompactList}\small\item\em Asks the user for the two airport codes and prints the best way to travel between them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_app_a14e0347ed8a4b7cdaf578bfa4922cbbe}{print\+Airlines\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Allows the user to choose preferred airlines and/or clear the list of preferred airlines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_app_ae41782802824cdabae78f00a73fb3c01}{print\+Best\+Way\+To\+Fly\+Cities}} ()
+\begin{DoxyCompactList}\small\item\em Asks the user for the two cities and searches the best possible way to get from one to another and prints it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_app_ac1e68b3d5aa2b030dae637a964e84bf2}\label{class_app_ac1e68b3d5aa2b030dae637a964e84bf2}} 
+\mbox{\hyperlink{class_gestao}{Gestao}} {\bfseries gestao}
+\item 
+\mbox{\Hypertarget{class_app_ae43e031e33b784a51625e77cffd13038}\label{class_app_ae43e031e33b784a51625e77cffd13038}} 
+set$<$ string $>$ {\bfseries airlines\+\_\+}
+\item 
+\mbox{\Hypertarget{class_app_a0ee96a73942ce41c0657b60b62063fc6}\label{class_app_a0ee96a73942ce41c0657b60b62063fc6}} 
+string {\bfseries type\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the main class of the program. It is responsible for the user interface. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_a14e0347ed8a4b7cdaf578bfa4922cbbe}\label{class_app_a14e0347ed8a4b7cdaf578bfa4922cbbe}} 
+\index{App@{App}!printAirlinesMenu@{printAirlinesMenu}}
+\index{printAirlinesMenu@{printAirlinesMenu}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printAirlinesMenu()}{printAirlinesMenu()}}
+{\footnotesize\ttfamily void App\+::print\+Airlines\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allows the user to choose preferred airlines and/or clear the list of preferred airlines. 
+
+Prints a menu dedicated to the airlines the user can fly with \mbox{\Hypertarget{class_app_a9b481d3ed7fa3a01ab064c6368d9090d}\label{class_app_a9b481d3ed7fa3a01ab064c6368d9090d}} 
+\index{App@{App}!printBestWayToFly@{printBestWayToFly}}
+\index{printBestWayToFly@{printBestWayToFly}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printBestWayToFly()}{printBestWayToFly()}}
+{\footnotesize\ttfamily void App\+::print\+Best\+Way\+To\+Fly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Asks the user for the two airport codes and prints the best way to travel between them. 
+
+Shows the user the best way to travel between two airports \mbox{\Hypertarget{class_app_ae41782802824cdabae78f00a73fb3c01}\label{class_app_ae41782802824cdabae78f00a73fb3c01}} 
+\index{App@{App}!printBestWayToFlyCities@{printBestWayToFlyCities}}
+\index{printBestWayToFlyCities@{printBestWayToFlyCities}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printBestWayToFlyCities()}{printBestWayToFlyCities()}}
+{\footnotesize\ttfamily void App\+::print\+Best\+Way\+To\+Fly\+Cities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Asks the user for the two cities and searches the best possible way to get from one to another and prints it. 
+
+Shows the user the best way to fly between two cities \mbox{\Hypertarget{class_app_a7865b115e70831893a2bb3fbdd0272ad}\label{class_app_a7865b115e70831893a2bb3fbdd0272ad}} 
+\index{App@{App}!printHowFar@{printHowFar}}
+\index{printHowFar@{printHowFar}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printHowFar()}{printHowFar()}}
+{\footnotesize\ttfamily void App\+::print\+How\+Far (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Asks the user for the two airport codes and prints the distance between them. 
+
+Shows the user the distance between two airports \mbox{\Hypertarget{class_app_ab7cea7e380fee8259a48b619bf62d718}\label{class_app_ab7cea7e380fee8259a48b619bf62d718}} 
+\index{App@{App}!printNumberOfAirlines@{printNumberOfAirlines}}
+\index{printNumberOfAirlines@{printNumberOfAirlines}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printNumberOfAirlines()}{printNumberOfAirlines()}}
+{\footnotesize\ttfamily void App\+::print\+Number\+Of\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Asks the user for the airport code and prints the number of different airlines that fly from said airport. 
+
+Prints the number of different airlines \mbox{\Hypertarget{class_app_acc1ca8c356a3faaedce3fe5c2bd67031}\label{class_app_acc1ca8c356a3faaedce3fe5c2bd67031}} 
+\index{App@{App}!printNumberOfArrivals@{printNumberOfArrivals}}
+\index{printNumberOfArrivals@{printNumberOfArrivals}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printNumberOfArrivals()}{printNumberOfArrivals()}}
+{\footnotesize\ttfamily void App\+::print\+Number\+Of\+Arrivals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Asks the user for the airport code and prints the number of arrivals to said airport. 
+
+Prints the number of arrivals \mbox{\Hypertarget{class_app_a777dfb1170160ab0607929e1263f0500}\label{class_app_a777dfb1170160ab0607929e1263f0500}} 
+\index{App@{App}!printNumberOfCountries@{printNumberOfCountries}}
+\index{printNumberOfCountries@{printNumberOfCountries}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printNumberOfCountries()}{printNumberOfCountries()}}
+{\footnotesize\ttfamily void App\+::print\+Number\+Of\+Countries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Asks the user for the airport code and prints the number of countries that the user can fly to from said airport. 
+
+Prints the number of countries \mbox{\Hypertarget{class_app_aa0c08652c17799f2434abcb39b7d6e2e}\label{class_app_aa0c08652c17799f2434abcb39b7d6e2e}} 
+\index{App@{App}!printNumberOfFlights@{printNumberOfFlights}}
+\index{printNumberOfFlights@{printNumberOfFlights}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printNumberOfFlights()}{printNumberOfFlights()}}
+{\footnotesize\ttfamily void App\+::print\+Number\+Of\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Asks the user for the airport code and prints the number of flights departing from said airport. 
+
+Prints the number of flights departing from a given airport \mbox{\Hypertarget{class_app_a6052bc3ebf5474a27dd9fc57a8d54735}\label{class_app_a6052bc3ebf5474a27dd9fc57a8d54735}} 
+\index{App@{App}!printUserMenu@{printUserMenu}}
+\index{printUserMenu@{printUserMenu}!App@{App}}
+\doxysubsubsection{\texorpdfstring{printUserMenu()}{printUserMenu()}}
+{\footnotesize\ttfamily bool App\+::print\+User\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints the User Menu/\+Interface \begin{DoxyReturn}{Returns}
+A new menu pertaining to the option chosen by the user or if invalid option, warns the user. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+App.\+h\end{DoxyCompactItemize}

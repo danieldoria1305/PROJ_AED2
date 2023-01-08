@@ -1,0 +1,88 @@
+\hypertarget{class_city}{}\doxysection{City Class Reference}
+\label{class_city}\index{City@{City}}
+
+
+Class that handles the cities.  
+
+
+
+
+{\ttfamily \#include $<$City.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_city_a545dc78812f823306a87073d9269d79b}{City}} (string name)
+\item 
+\mbox{\Hypertarget{class_city_a1b1f549430f0a7ecd0ec7b1605415193}\label{class_city_a1b1f549430f0a7ecd0ec7b1605415193}} 
+{\bfseries City} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_city}{City}} empty constructor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_city_a4843313c0238390843ae5760ec5b6561}{get\+Name}} () const
+\item 
+unordered\+\_\+set$<$ string $>$ \mbox{\hyperlink{class_city_a95d6bbadd6008d795e668111b4e67a40}{get\+Airports}} () const
+\item 
+void \mbox{\hyperlink{class_city_a3be24caf67c21999bb35d35a0963f986}{add\+Airport}} (string ap)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_city_a29c76b774e817ea0d41362b2e1e35415}\label{class_city_a29c76b774e817ea0d41362b2e1e35415}} 
+string {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{class_city_aabf7e2329378066143e5477ba3422d53}\label{class_city_aabf7e2329378066143e5477ba3422d53}} 
+unordered\+\_\+set$<$ string $>$ {\bfseries airports\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that handles the cities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_city_a545dc78812f823306a87073d9269d79b}\label{class_city_a545dc78812f823306a87073d9269d79b}} 
+\index{City@{City}!City@{City}}
+\index{City@{City}!City@{City}}
+\doxysubsubsection{\texorpdfstring{City()}{City()}}
+{\footnotesize\ttfamily City\+::\+City (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_city}{City}} constructor 
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{\hyperlink{class_city}{City}}\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_city_a3be24caf67c21999bb35d35a0963f986}\label{class_city_a3be24caf67c21999bb35d35a0963f986}} 
+\index{City@{City}!addAirport@{addAirport}}
+\index{addAirport@{addAirport}!City@{City}}
+\doxysubsubsection{\texorpdfstring{addAirport()}{addAirport()}}
+{\footnotesize\ttfamily void City\+::add\+Airport (\begin{DoxyParamCaption}\item[{string}]{ap }\end{DoxyParamCaption})}
+
+Adds an airport to the city 
+\begin{DoxyParams}{Parameters}
+{\em ap} & \mbox{\hyperlink{class_airport}{Airport}} to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_city_a95d6bbadd6008d795e668111b4e67a40}\label{class_city_a95d6bbadd6008d795e668111b4e67a40}} 
+\index{City@{City}!getAirports@{getAirports}}
+\index{getAirports@{getAirports}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getAirports()}{getAirports()}}
+{\footnotesize\ttfamily unordered\+\_\+set$<$ string $>$ City\+::get\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the city\textquotesingle{}s airports \begin{DoxyReturn}{Returns}
+Unordered set with the \mbox{\hyperlink{class_city}{City}}\textquotesingle{}s airports 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_city_a4843313c0238390843ae5760ec5b6561}\label{class_city_a4843313c0238390843ae5760ec5b6561}} 
+\index{City@{City}!getName@{getName}}
+\index{getName@{getName}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string City\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the city\textquotesingle{}s name \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_city}{City}}\textquotesingle{}s name 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+City.\+h\end{DoxyCompactItemize}

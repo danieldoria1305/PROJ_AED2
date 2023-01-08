@@ -1,0 +1,44 @@
+\hypertarget{_country_8h_source}{}\doxysection{Country.\+h}
+\label{_country_8h_source}\index{Country.h@{Country.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRABALHOAED2\_COUNTRY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRABALHOAED2\_COUNTRY\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}City.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Airline.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_country}{Country}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_country_ac1b0ff6328b9bffb195a2fe7c2dd711d}{Country}}(\textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_country_a4cba457856775a13a17dfcb11a77e224}{Country}}();\ \textcolor{comment}{//default\ constructor}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_country_af86e64cecec9c266dbf284329ab072f3}{getName}}()\ \textcolor{keyword}{const};\ \ \textcolor{comment}{//\ Returns\ the\ name\ of\ the\ country}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ unordered\_set<string>\ \mbox{\hyperlink{class_country_afda368773887f702c4dec43c1b361f8c}{getCities}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Returns\ the\ list\ of\ cities\ in\ the\ country}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00034\ \ \ \ \ unordered\_set<string>\ \mbox{\hyperlink{class_country_a077cbdf3f8568f80b9a52d4f967e7830}{getAirlines}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Returns\ the\ list\ of\ airlines\ in\ the\ country}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_country_ab0203e4d39dd2154b48519fbadfa159c}{addAirline}}(\textcolor{keywordtype}{string}\ al);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_country_a3b2beb1c05978f76c644760d76120264}{addCity}}(\textcolor{keywordtype}{string}\ c);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{string}\ name\_;}
+\DoxyCodeLine{00047\ \ \ \ \ unordered\_set<string>\ cities\_;}
+\DoxyCodeLine{00048\ \ \ \ \ unordered\_set<string>\ airlines\_;}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TRABALHOAED2\_COUNTRY\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,282 @@
+\hypertarget{class_flights}{}\doxysection{Flights Class Reference}
+\label{class_flights}\index{Flights@{Flights}}
+
+
+Class that handles the flights.  
+
+
+
+
+{\ttfamily \#include $<$Flights.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_flights_1_1_source}{Source}}
+\begin{DoxyCompactList}\small\item\em Struct that represents a source airport. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_flights_1_1_target}{Target}}
+\begin{DoxyCompactList}\small\item\em Struct that represents a flight. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_flights_a97569da7ddd9237e8c01434cf2e08745}{add\+Edge}} (\mbox{\hyperlink{class_airport}{Airport}} source, \mbox{\hyperlink{class_airport}{Airport}} target, string airline)
+\item 
+void \mbox{\hyperlink{class_flights_a4cb38d3c2c1f00b34e75069a904eafe7}{bfs}} (string source)
+\begin{DoxyCompactList}\small\item\em Searches for a node in the graph of flights that fits the source criteria. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_flights_a1768a23effcc91c7d8a6ea7e2ccf3eb6}{calculate\+Distance}} (\mbox{\hyperlink{class_airport}{Airport}} airport1, \mbox{\hyperlink{class_airport}{Airport}} airport2)
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_flights_a70ea2dd2f15c2102f5302dc35cb90ba9}{dijkstra}} (string src, string dest, std\+::set$<$ string $>$ airlines)
+\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_flights_1_1_source}{Source}} $>$ \mbox{\hyperlink{class_flights_a54a576bd3f2caa58c61d8eeca6c7f891}{get\+Sources}} ()
+\item 
+\mbox{\Hypertarget{class_flights_aa07a424e525b4ad7b20e3685b0084585}\label{class_flights_aa07a424e525b4ad7b20e3685b0084585}} 
+vector$<$ pair$<$ string, pair$<$ int, double $>$ $>$ $>$ {\bfseries how\+Far} (int i)
+\item 
+vector$<$ pair$<$ string, double $>$ $>$ \mbox{\hyperlink{class_flights_a4e7aa849a095afc29e1ac2a05e84af96}{how\+Far}} (int i, string src)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_flights_1_1_source}{Source}} $>$ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that handles the flights. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_flights_a97569da7ddd9237e8c01434cf2e08745}\label{class_flights_a97569da7ddd9237e8c01434cf2e08745}} 
+\index{Flights@{Flights}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Flights@{Flights}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Flights\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{source,  }\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{target,  }\item[{string}]{airline }\end{DoxyParamCaption})}
+
+Adding nodes to the graph of flights 
+\begin{DoxyParams}{Parameters}
+{\em source} & \mbox{\hyperlink{class_airport}{Airport}} from where the flight departs \\
+\hline
+{\em target} & \mbox{\hyperlink{class_airport}{Airport}} where the flight should arrive \\
+\hline
+{\em airline} & \mbox{\hyperlink{class_airline}{Airline}} in charge of said flight 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flights_a97569da7ddd9237e8c01434cf2e08745}{Flights::addEdge}}(\mbox{\hyperlink{class_airport}{Airport}}\ source,\ \mbox{\hyperlink{class_airport}{Airport}}\ target,\ \textcolor{keywordtype}{string}\ airline)\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}.find(source.\mbox{\hyperlink{class_airport_ad1369e1d47c87e205f1718b853a66d54}{getCode}}())==\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}.end())\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[source.\mbox{\hyperlink{class_airport_ad1369e1d47c87e205f1718b853a66d54}{getCode}}()]=\{\};}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}.find(target.\mbox{\hyperlink{class_airport_ad1369e1d47c87e205f1718b853a66d54}{getCode}}())==\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}.end())\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[target.\mbox{\hyperlink{class_airport_ad1369e1d47c87e205f1718b853a66d54}{getCode}}()]=\{\};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[source.\mbox{\hyperlink{class_airport_ad1369e1d47c87e205f1718b853a66d54}{getCode}}()].targets.push\_back(\{target.\mbox{\hyperlink{class_airport_ad1369e1d47c87e205f1718b853a66d54}{getCode}}(),airline,\ \mbox{\hyperlink{class_flights_a1768a23effcc91c7d8a6ea7e2ccf3eb6}{calculateDistance}}(source,target)\});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flights_a4cb38d3c2c1f00b34e75069a904eafe7}\label{class_flights_a4cb38d3c2c1f00b34e75069a904eafe7}} 
+\index{Flights@{Flights}!bfs@{bfs}}
+\index{bfs@{bfs}!Flights@{Flights}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily void Flights\+::bfs (\begin{DoxyParamCaption}\item[{string}]{source }\end{DoxyParamCaption})}
+
+
+
+Searches for a node in the graph of flights that fits the source criteria. 
+
+Breadth First Search algorithm 
+\begin{DoxyParams}{Parameters}
+{\em source} & \mbox{\hyperlink{class_airport}{Airport}} from where the flight departs 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flights_a4cb38d3c2c1f00b34e75069a904eafe7}{Flights::bfs}}(\textcolor{keywordtype}{string}\ source)\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ s:\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}})\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ s.second.visited=\textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ \ \ \ s.second.dist=-\/1;}
+\DoxyCodeLine{\ \ \ \ \ \ \ s.second.realDistance=0;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ queue<string>\ q;}
+\DoxyCodeLine{\ \ \ q.push(source);}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[source].visited\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[source].dist=0;}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{while}\ (!q.empty())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ u\ =\ q.front();\ q.pop();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ e\ :\ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[u].targets)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ w\ =\ e.target;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[w].visited)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q.push(w);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[w].realDistance=\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[u].realDistance+e.distance;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[w].dist=\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[u].dist+1;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[w].visited\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flights_a1768a23effcc91c7d8a6ea7e2ccf3eb6}\label{class_flights_a1768a23effcc91c7d8a6ea7e2ccf3eb6}} 
+\index{Flights@{Flights}!calculateDistance@{calculateDistance}}
+\index{calculateDistance@{calculateDistance}!Flights@{Flights}}
+\doxysubsubsection{\texorpdfstring{calculateDistance()}{calculateDistance()}}
+{\footnotesize\ttfamily double Flights\+::calculate\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{airport1,  }\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{airport2 }\end{DoxyParamCaption})}
+
+Calculates the distance between two coordinates using the Haversine formula 
+\begin{DoxyParams}{Parameters}
+{\em airport1} & First airport \\
+\hline
+{\em airport2} & Second airport 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_flights_a1768a23effcc91c7d8a6ea7e2ccf3eb6}{Flights::calculateDistance}}(\mbox{\hyperlink{class_airport}{Airport}}\ airport1,\ \mbox{\hyperlink{class_airport}{Airport}}\ airport2)\ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{float}\ long1\ =\ airport1.\mbox{\hyperlink{class_airport_aaf5a462f7607db06caebc77a61c8c12e}{getLongitude}}();}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{float}\ lat1\ =\ airport1.\mbox{\hyperlink{class_airport_ae688a5ffe740b12265436e378ca95791}{getLatitude}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{float}\ long2\ =\ airport2.\mbox{\hyperlink{class_airport_aaf5a462f7607db06caebc77a61c8c12e}{getLongitude}}();}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{float}\ lat2\ =\ airport2.\mbox{\hyperlink{class_airport_ae688a5ffe740b12265436e378ca95791}{getLatitude}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{float}\ dLat\ =\ (lat2\ -\/\ lat1)\ *\ M\_PI\ /\ 180.0;}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{float}\ dLong\ =\ (long2\ -\/\ long1)\ *\ M\_PI\ /\ 180.0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ lat1\ =\ (lat1)\ *\ M\_PI\ /\ 180.0;}
+\DoxyCodeLine{\ \ \ lat2\ =\ (lat2)\ *\ M\_PI\ /\ 180.0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{double}\ a\ =\ pow(sin(dLat\ /\ 2),\ 2)\ +\ pow(sin(dLong\ /\ 2),\ 2)\ *\ cos(lat1)\ *\ cos(lat2);}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{double}\ rad\ =\ 6371;}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{double}\ c\ =\ 2\ *\ asin(sqrt(a));}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ rad\ *\ c;}
+\DoxyCodeLine{\ \}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance between the two airports 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flights_a70ea2dd2f15c2102f5302dc35cb90ba9}\label{class_flights_a70ea2dd2f15c2102f5302dc35cb90ba9}} 
+\index{Flights@{Flights}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!Flights@{Flights}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Flights\+::dijkstra (\begin{DoxyParamCaption}\item[{string}]{src,  }\item[{string}]{dest,  }\item[{std\+::set$<$ string $>$}]{airlines }\end{DoxyParamCaption})}
+
+Algorithm that finds the shortest path between nodes in the graph of flights 
+\begin{DoxyParams}{Parameters}
+{\em src} & \mbox{\hyperlink{class_airport}{Airport}} from where the flight departs \\
+\hline
+{\em dest} & \mbox{\hyperlink{class_airport}{Airport}} where the flight should arrive \\
+\hline
+{\em airlines} & Set of airlines that can be used in the flight 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{vector<string>\ \mbox{\hyperlink{class_flights_a70ea2dd2f15c2102f5302dc35cb90ba9}{Flights::dijkstra}}(\textcolor{keywordtype}{string}\ src,\ \textcolor{keywordtype}{string}\ dest,\ std::set<string>\ airlines)\ \{}
+\DoxyCodeLine{\ \ \ priority\_queue<pair<int,\ string>,\ vector<pair<int,\ string>>,\ greater<pair<int,\ string>>>\ pq;}
+\DoxyCodeLine{\ \ \ unordered\_map<string,\ string>\ prev;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ pair:\ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}})\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ pair.second.dist=INT\_MAX;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[src].dist\ =\ 0;}
+\DoxyCodeLine{\ \ \ pq.emplace(0,\ src);}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{bool}\ b=\textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{while}\ (!pq.empty())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ u\ =\ pq.top().second;pq.pop();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (u\ ==\ dest)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ b=\textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ e\ :\ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[u].targets)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(airlines.empty()\ or\ airlines.find(e.airline)!=airlines.end())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ w\ =\ e.target;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (alt\ <\ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[w].dist)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}}[w].dist\ =\ alt;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prev[w]\ =\ u;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pq.emplace(alt,\ w);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ vector<string>\ result;}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{if}(!b)\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{string}\ u=dest;}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{while}(u!=src)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ result.push\_back(u);}
+\DoxyCodeLine{\ \ \ \ \ \ \ u=prev[u];}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ result.push\_back(src);}
+\DoxyCodeLine{\ \ \ reverse(result.begin(),result.end());}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\ \}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector containing the shortest path between the two airports 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Utilizes the Dijkstra algorithm to find the shortest path 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_flights_a54a576bd3f2caa58c61d8eeca6c7f891}\label{class_flights_a54a576bd3f2caa58c61d8eeca6c7f891}} 
+\index{Flights@{Flights}!getSources@{getSources}}
+\index{getSources@{getSources}!Flights@{Flights}}
+\doxysubsubsection{\texorpdfstring{getSources()}{getSources()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_flights_1_1_source}{Source}} $>$ Flights\+::get\+Sources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the flights sources \begin{DoxyReturn}{Returns}
+Unordered map containing the airports from where the flights depart 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flights_a4e7aa849a095afc29e1ac2a05e84af96}\label{class_flights_a4e7aa849a095afc29e1ac2a05e84af96}} 
+\index{Flights@{Flights}!howFar@{howFar}}
+\index{howFar@{howFar}!Flights@{Flights}}
+\doxysubsubsection{\texorpdfstring{howFar()}{howFar()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ string, double $>$ $>$ Flights\+::how\+Far (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{string}]{src }\end{DoxyParamCaption})}
+
+Gets how airports that are at a certain distance from a source airport 
+\begin{DoxyParams}{Parameters}
+{\em i} & Distance from the source airport \\
+\hline
+{\em src} & \mbox{\hyperlink{struct_flights_1_1_source}{Source}} airport 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{vector<pair<string,double>>\ Flights::howFar(\textcolor{keywordtype}{int}\ i,\textcolor{keywordtype}{string}\ src)\{}
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{class_flights_a4cb38d3c2c1f00b34e75069a904eafe7}{bfs}}(src);}
+\DoxyCodeLine{\ \ \ vector<pair<string,double>>\ result;}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ s:\mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}})\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(s.second.dist==i)\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ result.push\_back(\{s.first,s.second.realDistance\});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\ \}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector containing the airports that are at a certain distance from a source airport 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Utilizes the bfs algorithm to find the airports that are at a certain distance from a source airport 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_flights_af70697c3fef303559e0f935b4f0a4bd9}\label{class_flights_af70697c3fef303559e0f935b4f0a4bd9}} 
+\index{Flights@{Flights}!sources@{sources}}
+\index{sources@{sources}!Flights@{Flights}}
+\doxysubsubsection{\texorpdfstring{sources}{sources}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$string,\mbox{\hyperlink{struct_flights_1_1_source}{Source}}$>$ Flights\+::sources\hspace{0.3cm}{\ttfamily [private]}}
+
+Gets airports being represented \begin{DoxyReturn}{Returns}
+Unordered map containing the airports from where the flights depart 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Flights.\+h\end{DoxyCompactItemize}

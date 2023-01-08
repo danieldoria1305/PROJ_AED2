@@ -1,0 +1,261 @@
+\hypertarget{class_gestao}{}\doxysection{Gestao Class Reference}
+\label{class_gestao}\index{Gestao@{Gestao}}
+
+
+Class that handles the management of the data.  
+
+
+
+
+{\ttfamily \#include $<$Gestao.\+h$>$}
+
+
+
+Collaboration diagram for Gestao\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gestao_a448800e55b184a333f2240a66f312d0d}{read\+File\+Airlines}} ()
+\item 
+void \mbox{\hyperlink{class_gestao_ab7d5fdd4b05c75630746c981f4f96260}{read\+File\+Airports}} ()
+\item 
+void \mbox{\hyperlink{class_gestao_aae44023f9f04ee0cbffcb0ec9bbf5ec1}{read\+File\+Flights}} ()
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_gestao_a14334342b5e53af2c713b902c38899b7}{get\+Distance}} (string a, string b, set$<$ string $>$ airlines)
+\item 
+M\+\_\+airport \mbox{\hyperlink{class_gestao_acaebf446977994edcd7e3feb4338e156}{get\+Airports}} () const
+\item 
+\mbox{\hyperlink{class_flights}{Flights}} \mbox{\hyperlink{class_gestao_a949d2c144454ffce5425b9396d970a87}{get\+Flights}} () const
+\item 
+M\+\_\+airline \mbox{\hyperlink{class_gestao_ab1c73ba80d41566b0357d7b5c5ecc015}{get\+Airlines}} () const
+\item 
+M\+\_\+country \mbox{\hyperlink{class_gestao_a7c02966e7b04be9f151ebdc71c53bf65}{get\+Countries}} () const
+\item 
+M\+\_\+city \mbox{\hyperlink{class_gestao_ac42094bb00b23af5fd89d1d49944d27c}{get\+Cities}} () const
+\item 
+vector$<$ pair$<$ string, double $>$ $>$ \mbox{\hyperlink{class_gestao_a3ed363600987e254f860095864c5ba91}{get\+How\+Far}} (int i, string src)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gestao_ae396bc1aeb406811225934060d5a793e}\label{class_gestao_ae396bc1aeb406811225934060d5a793e}} 
+M\+\_\+country {\bfseries countries\+\_\+}
+\item 
+\mbox{\Hypertarget{class_gestao_a5a2a622fc1c58f5fd746493081cee58b}\label{class_gestao_a5a2a622fc1c58f5fd746493081cee58b}} 
+M\+\_\+city {\bfseries cities\+\_\+}
+\item 
+\mbox{\Hypertarget{class_gestao_a86afe098d2a8a5f8b96b119a9a217af0}\label{class_gestao_a86afe098d2a8a5f8b96b119a9a217af0}} 
+M\+\_\+airport {\bfseries airports\+\_\+}
+\item 
+\mbox{\Hypertarget{class_gestao_a9b528234f01bfcad869882d9bef02f8e}\label{class_gestao_a9b528234f01bfcad869882d9bef02f8e}} 
+M\+\_\+airline {\bfseries airlines\+\_\+}
+\item 
+\mbox{\Hypertarget{class_gestao_a7c201c0fcdcc7c323fd8080a81d8f0c5}\label{class_gestao_a7c201c0fcdcc7c323fd8080a81d8f0c5}} 
+\mbox{\hyperlink{class_flights}{Flights}} {\bfseries flights\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that handles the management of the data. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gestao_ab1c73ba80d41566b0357d7b5c5ecc015}\label{class_gestao_ab1c73ba80d41566b0357d7b5c5ecc015}} 
+\index{Gestao@{Gestao}!getAirlines@{getAirlines}}
+\index{getAirlines@{getAirlines}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{getAirlines()}{getAirlines()}}
+{\footnotesize\ttfamily M\+\_\+airline Gestao\+::get\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets Airlines stored \begin{DoxyReturn}{Returns}
+unordered map with the airlines 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestao_acaebf446977994edcd7e3feb4338e156}\label{class_gestao_acaebf446977994edcd7e3feb4338e156}} 
+\index{Gestao@{Gestao}!getAirports@{getAirports}}
+\index{getAirports@{getAirports}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{getAirports()}{getAirports()}}
+{\footnotesize\ttfamily M\+\_\+airport Gestao\+::get\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets Airports stored \begin{DoxyReturn}{Returns}
+unordered map with the airports 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestao_ac42094bb00b23af5fd89d1d49944d27c}\label{class_gestao_ac42094bb00b23af5fd89d1d49944d27c}} 
+\index{Gestao@{Gestao}!getCities@{getCities}}
+\index{getCities@{getCities}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{getCities()}{getCities()}}
+{\footnotesize\ttfamily M\+\_\+city Gestao\+::get\+Cities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets Cities stored \begin{DoxyReturn}{Returns}
+unordered map with the cities 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestao_a7c02966e7b04be9f151ebdc71c53bf65}\label{class_gestao_a7c02966e7b04be9f151ebdc71c53bf65}} 
+\index{Gestao@{Gestao}!getCountries@{getCountries}}
+\index{getCountries@{getCountries}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{getCountries()}{getCountries()}}
+{\footnotesize\ttfamily M\+\_\+country Gestao\+::get\+Countries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets Countries stored \begin{DoxyReturn}{Returns}
+unordered map with the countries 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestao_a14334342b5e53af2c713b902c38899b7}\label{class_gestao_a14334342b5e53af2c713b902c38899b7}} 
+\index{Gestao@{Gestao}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Gestao\+::get\+Distance (\begin{DoxyParamCaption}\item[{string}]{a,  }\item[{string}]{b,  }\item[{set$<$ string $>$}]{airlines }\end{DoxyParamCaption})}
+
+Gets distance between two airports 
+\begin{DoxyParams}{Parameters}
+{\em a} & Departure airport \\
+\hline
+{\em b} & Destination airport \\
+\hline
+{\em airlines} & Set of available airlines \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance between airports 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Utilizes a previously defined function called dijkstra, defined in \mbox{\hyperlink{_flights_8h_source}{Flights.\+h}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_gestao_a949d2c144454ffce5425b9396d970a87}\label{class_gestao_a949d2c144454ffce5425b9396d970a87}} 
+\index{Gestao@{Gestao}!getFlights@{getFlights}}
+\index{getFlights@{getFlights}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{getFlights()}{getFlights()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_flights}{Flights}} Gestao\+::get\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets \mbox{\hyperlink{class_flights}{Flights}} stored \begin{DoxyReturn}{Returns}
+graph of flights 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestao_a3ed363600987e254f860095864c5ba91}\label{class_gestao_a3ed363600987e254f860095864c5ba91}} 
+\index{Gestao@{Gestao}!getHowFar@{getHowFar}}
+\index{getHowFar@{getHowFar}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{getHowFar()}{getHowFar()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ string, double $>$ $>$ Gestao\+::get\+How\+Far (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{string}]{src }\end{DoxyParamCaption})}
+
+Gets the places that can are at the same distance from a given airport 
+\begin{DoxyParams}{Parameters}
+{\em i} & distance \\
+\hline
+{\em src} & \mbox{\hyperlink{class_airport}{Airport}} from where flights depart \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with the airports that are at the same distance 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Utilizes the previously defined function how\+Far from the class \mbox{\hyperlink{class_flights}{Flights}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_gestao_a448800e55b184a333f2240a66f312d0d}\label{class_gestao_a448800e55b184a333f2240a66f312d0d}} 
+\index{Gestao@{Gestao}!readFileAirlines@{readFileAirlines}}
+\index{readFileAirlines@{readFileAirlines}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{readFileAirlines()}{readFileAirlines()}}
+{\footnotesize\ttfamily void Gestao\+::read\+File\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function to read the file with the information of the airlines 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestao_a448800e55b184a333f2240a66f312d0d}{Gestao::readFileAirlines}}()\ \{}
+\DoxyCodeLine{\ \ \ std::ifstream\ airlines;}
+\DoxyCodeLine{\ \ \ airlines.open(\textcolor{stringliteral}{"{}../Code/dataset/airlines.csv"{}});}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{string}\ code=\textcolor{stringliteral}{"{}"{}},\ name=\textcolor{stringliteral}{"{}"{}},\ callsign=\textcolor{stringliteral}{"{}"{}},\ country=\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{\ \ \ getline(airlines,\ line);\ \textcolor{comment}{//\ Skip\ the\ first\ line}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{while}\ (getline(airlines,\ line))\ \{}
+\DoxyCodeLine{\ \ \ \ \ stringstream\ inputString(line);}
+\DoxyCodeLine{\ \ \ \ \ \textcolor{keywordtype}{string}\ AirlineCode,\ AirlineName,\ AirlineCallSign,\ AirlineCountry;}
+\DoxyCodeLine{\ \ \ \ \ getline(inputString,\ AirlineCode,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ getline(inputString,\ AirlineName,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ getline(inputString,\ AirlineCallSign,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ getline(inputString,\ AirlineCountry,\ \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{\ \ \ \ \ \textcolor{keywordflow}{if}(countries\_.find(AirlineCountry)==countries\_.end())\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_country}{Country}}\ c(AirlineCountry);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ countries\_[AirlineCountry]=c;}
+\DoxyCodeLine{\ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \textcolor{keyword}{auto}\ it=countries\_.find(AirlineCountry);}
+\DoxyCodeLine{\ \ \ \ \ \mbox{\hyperlink{class_airline}{Airline}}\ al(AirlineCode,AirlineName,AirlineCallSign,AirlineCountry);}
+\DoxyCodeLine{\ \ \ \ \ airlines\_[AirlineCode]=al;}
+\DoxyCodeLine{\ \ \ \ \ it-\/>second.addAirline(AirlineCode);}
+\DoxyCodeLine{\ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+A .csv file is read with the code, name, call sign and country of the airline 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_gestao_ab7d5fdd4b05c75630746c981f4f96260}\label{class_gestao_ab7d5fdd4b05c75630746c981f4f96260}} 
+\index{Gestao@{Gestao}!readFileAirports@{readFileAirports}}
+\index{readFileAirports@{readFileAirports}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{readFileAirports()}{readFileAirports()}}
+{\footnotesize\ttfamily void Gestao\+::read\+File\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function to read the file with the information of the airports 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestao_ab7d5fdd4b05c75630746c981f4f96260}{Gestao::readFileAirports}}()\ \{}
+\DoxyCodeLine{\ \ \ std::ifstream\ airports;}
+\DoxyCodeLine{\ \ \ airports.open(\textcolor{stringliteral}{"{}../Code/dataset/airports.csv"{}});}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{string}\ code=\textcolor{stringliteral}{"{}"{}},\ name=\textcolor{stringliteral}{"{}"{}},\ city=\textcolor{stringliteral}{"{}"{}},\ country=\textcolor{stringliteral}{"{}"{}},\ latitude=\textcolor{stringliteral}{"{}"{}},\ longitude=\textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{\ \ \ getline(airports,\ line);\ \textcolor{comment}{//\ Skip\ the\ first\ line}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{while}\ (getline(airports,\ line))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ stringstream\ inputString(line);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ AirportCode,\ AirportName,\ AirportCity,\ AirportCountry,\ AirportLatitude,\ AirportLongitude;}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ AirportCode,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ AirportName,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ AirportCity,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ AirportCountry,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ AirportLatitude,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ AirportLongitude,\ \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countries\_.find(AirportCountry)==countries\_.end())\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_country}{Country}}\ coutry\_(AirportCountry);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ countries\_[AirportCountry]=coutry\_;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it=countries\_.find(AirportCountry);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ ap(AirportCode,AirportName,AirportCity,AirportCountry,stof(AirportLongitude),stof(AirportLatitude));}
+\DoxyCodeLine{\ \ \ \ \ \ \ it-\/>second.addCity(AirportCity);}
+\DoxyCodeLine{\ \ \ \ \ \ \ airports\_[AirportCode]=ap;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(cities\_.find(AirportCity)==cities\_.end())\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_city}{City}}\ city(AirportCity);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ cities\_[AirportCity]=city;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ itc=cities\_.find(AirportCity);}
+\DoxyCodeLine{\ \ \ \ \ \ \ itc-\/>second.addAirport(AirportCode);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+A .csv file is read with the code, name, city, country, latitude and longitude of the airport 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_gestao_aae44023f9f04ee0cbffcb0ec9bbf5ec1}\label{class_gestao_aae44023f9f04ee0cbffcb0ec9bbf5ec1}} 
+\index{Gestao@{Gestao}!readFileFlights@{readFileFlights}}
+\index{readFileFlights@{readFileFlights}!Gestao@{Gestao}}
+\doxysubsubsection{\texorpdfstring{readFileFlights()}{readFileFlights()}}
+{\footnotesize\ttfamily void Gestao\+::read\+File\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function to read the file with the information of the flights 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_gestao_aae44023f9f04ee0cbffcb0ec9bbf5ec1}{Gestao::readFileFlights}}()\ \{}
+\DoxyCodeLine{\ \ \ std::ifstream\ flights;}
+\DoxyCodeLine{\ \ \ flights.open(\textcolor{stringliteral}{"{}../Code/dataset/flights.csv"{}});}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{\ \ \ getline(flights,\ line);\ \textcolor{comment}{//\ Skip\ the\ first\ line}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{while}\ (getline(flights,\ line))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ stringstream\ inputString(line);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ FlightSource,\ FlightTarget,\ FlightAirline;}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ FlightSource,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ FlightTarget,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{\ \ \ \ \ \ \ getline(inputString,\ FlightAirline,\ \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ source=airports\_.find(FlightSource);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{auto}\ target=airports\_.find(FlightTarget);}
+\DoxyCodeLine{\ \ \ \ \ \ \ flights\_.\mbox{\hyperlink{class_flights_a97569da7ddd9237e8c01434cf2e08745}{addEdge}}(source-\/>second,target-\/>second,FlightAirline);}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \}}
+
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+A .csv file is read with the code of the source airport, the target airport and the airline of the flight 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Gestao.\+h\end{DoxyCompactItemize}

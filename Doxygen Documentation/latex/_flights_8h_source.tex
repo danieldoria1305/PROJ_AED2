@@ -1,0 +1,54 @@
+\hypertarget{_flights_8h_source}{}\doxysection{Flights.\+h}
+\label{_flights_8h_source}\index{Flights.h@{Flights.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ TRABALHOAED2\_FLIGHTS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ TRABALHOAED2\_FLIGHTS\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Airport.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Airline.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_flights}{Flights}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_flights_1_1_target}{Target}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{struct_flights_1_1_target_a147e496cdf3df7a323c6c9f3a04477f6}{target}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{struct_flights_1_1_target_aa674c0527fab4861347fca70baac5af9}{airline}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_flights_1_1_target_a851f89615923efc3fab825b5abacf0db}{distance}};}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_flights_1_1_source}{Source}}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ list<Target>\ \mbox{\hyperlink{struct_flights_1_1_source_af248bd5a581f6ed5550b3ec366cb7812}{targets}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_flights_1_1_source_a95e02393cdb24ce432ef56eda86e77c4}{visited}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_flights_1_1_source_ada7325f8d4f7a479a3e112b14e017cd8}{dist}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_flights_1_1_source_af7a3a898c95ecaa1a58f14a50a0ff8e2}{realDistance}};}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00048\ \ \ \ \ unordered\_map<string,Source>\ \mbox{\hyperlink{class_flights_af70697c3fef303559e0f935b4f0a4bd9}{sources}};\ \textcolor{comment}{//\ Unordered\ map\ of\ Airports\ being\ represented}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flights_a97569da7ddd9237e8c01434cf2e08745}{addEdge}}(\mbox{\hyperlink{class_airport}{Airport}}\ source,\ \mbox{\hyperlink{class_airport}{Airport}}\ target,\ \textcolor{keywordtype}{string}\ airline);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flights_a4cb38d3c2c1f00b34e75069a904eafe7}{bfs}}(\textcolor{keywordtype}{string}\ source);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_flights_a1768a23effcc91c7d8a6ea7e2ccf3eb6}{calculateDistance}}(\mbox{\hyperlink{class_airport}{Airport}}\ airport1,\ \mbox{\hyperlink{class_airport}{Airport}}\ airport2);\ \textcolor{comment}{//\ Calculates\ the\ distance\ between\ two\ coordinates\ using\ the\ Haversine\ formula}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00175\ \ \ \ \ vector<string>\ \mbox{\hyperlink{class_flights_a70ea2dd2f15c2102f5302dc35cb90ba9}{dijkstra}}(\textcolor{keywordtype}{string}\ src,\ \textcolor{keywordtype}{string}\ dest,\ std::set<string>\ airlines);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00179\ \ \ \ \ unordered\_map<string,Source>\ \mbox{\hyperlink{class_flights_a54a576bd3f2caa58c61d8eeca6c7f891}{getSources}}();}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ vector<pair<string,\ pair<int,\ double>>>\ howFar(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00202\ \ \ \ \ vector<pair<string,\ double>>\ \mbox{\hyperlink{class_flights_a4e7aa849a095afc29e1ac2a05e84af96}{howFar}}(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{string}\ src);}
+\DoxyCodeLine{00203\ \};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TRABALHOAED2\_FLIGHTS\_H}}
+
+\end{DoxyCode}

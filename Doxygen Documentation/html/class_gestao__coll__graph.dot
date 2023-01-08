@@ -1,0 +1,10 @@
+digraph "Gestao"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="Gestao",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Class that handles the management of the data."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" flights_" ];
+  Node2 [label="Flights",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_flights.html",tooltip="Class that handles the flights."];
+}

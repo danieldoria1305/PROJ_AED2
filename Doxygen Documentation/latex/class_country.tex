@@ -1,0 +1,115 @@
+\hypertarget{class_country}{}\doxysection{Country Class Reference}
+\label{class_country}\index{Country@{Country}}
+
+
+Class that represents a country.  
+
+
+
+
+{\ttfamily \#include $<$Country.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_country_ac1b0ff6328b9bffb195a2fe7c2dd711d}{Country}} (string name)
+\item 
+\mbox{\Hypertarget{class_country_a4cba457856775a13a17dfcb11a77e224}\label{class_country_a4cba457856775a13a17dfcb11a77e224}} 
+{\bfseries Country} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_country}{Country}}\textquotesingle{}s empty constructor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_country_af86e64cecec9c266dbf284329ab072f3}{get\+Name}} () const
+\item 
+unordered\+\_\+set$<$ string $>$ \mbox{\hyperlink{class_country_afda368773887f702c4dec43c1b361f8c}{get\+Cities}} () const
+\item 
+unordered\+\_\+set$<$ string $>$ \mbox{\hyperlink{class_country_a077cbdf3f8568f80b9a52d4f967e7830}{get\+Airlines}} () const
+\item 
+void \mbox{\hyperlink{class_country_ab0203e4d39dd2154b48519fbadfa159c}{add\+Airline}} (string al)
+\item 
+void \mbox{\hyperlink{class_country_a3b2beb1c05978f76c644760d76120264}{add\+City}} (string c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_country_a202b7305590ed7204ba16d62ea071125}\label{class_country_a202b7305590ed7204ba16d62ea071125}} 
+string {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{class_country_aca5a0ad65db89753744005daac2fd2fd}\label{class_country_aca5a0ad65db89753744005daac2fd2fd}} 
+unordered\+\_\+set$<$ string $>$ {\bfseries cities\+\_\+}
+\item 
+\mbox{\Hypertarget{class_country_a259b57d983e64ad02221b4547f9612ce}\label{class_country_a259b57d983e64ad02221b4547f9612ce}} 
+unordered\+\_\+set$<$ string $>$ {\bfseries airlines\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents a country. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_country_ac1b0ff6328b9bffb195a2fe7c2dd711d}\label{class_country_ac1b0ff6328b9bffb195a2fe7c2dd711d}} 
+\index{Country@{Country}!Country@{Country}}
+\index{Country@{Country}!Country@{Country}}
+\doxysubsubsection{\texorpdfstring{Country()}{Country()}}
+{\footnotesize\ttfamily Country\+::\+Country (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_country}{Country}}\textquotesingle{}s constructor 
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{\hyperlink{class_country}{Country}}\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_country_ab0203e4d39dd2154b48519fbadfa159c}\label{class_country_ab0203e4d39dd2154b48519fbadfa159c}} 
+\index{Country@{Country}!addAirline@{addAirline}}
+\index{addAirline@{addAirline}!Country@{Country}}
+\doxysubsubsection{\texorpdfstring{addAirline()}{addAirline()}}
+{\footnotesize\ttfamily void Country\+::add\+Airline (\begin{DoxyParamCaption}\item[{string}]{al }\end{DoxyParamCaption})}
+
+Add an airline to the country 
+\begin{DoxyParams}{Parameters}
+{\em al} & \mbox{\hyperlink{class_airline}{Airline}} to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_country_a3b2beb1c05978f76c644760d76120264}\label{class_country_a3b2beb1c05978f76c644760d76120264}} 
+\index{Country@{Country}!addCity@{addCity}}
+\index{addCity@{addCity}!Country@{Country}}
+\doxysubsubsection{\texorpdfstring{addCity()}{addCity()}}
+{\footnotesize\ttfamily void Country\+::add\+City (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption})}
+
+Add a city to the country 
+\begin{DoxyParams}{Parameters}
+{\em c} & \mbox{\hyperlink{class_city}{City}} to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_country_a077cbdf3f8568f80b9a52d4f967e7830}\label{class_country_a077cbdf3f8568f80b9a52d4f967e7830}} 
+\index{Country@{Country}!getAirlines@{getAirlines}}
+\index{getAirlines@{getAirlines}!Country@{Country}}
+\doxysubsubsection{\texorpdfstring{getAirlines()}{getAirlines()}}
+{\footnotesize\ttfamily unordered\+\_\+set$<$ string $>$ Country\+::get\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get country\textquotesingle{}s airlines \begin{DoxyReturn}{Returns}
+Unordered set containing the \mbox{\hyperlink{class_country}{Country}}\textquotesingle{}s airlines 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_country_afda368773887f702c4dec43c1b361f8c}\label{class_country_afda368773887f702c4dec43c1b361f8c}} 
+\index{Country@{Country}!getCities@{getCities}}
+\index{getCities@{getCities}!Country@{Country}}
+\doxysubsubsection{\texorpdfstring{getCities()}{getCities()}}
+{\footnotesize\ttfamily unordered\+\_\+set$<$ string $>$ Country\+::get\+Cities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get country\textquotesingle{}s cities \begin{DoxyReturn}{Returns}
+Unordered set containing the \mbox{\hyperlink{class_country}{Country}}\textquotesingle{}s cities 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_country_af86e64cecec9c266dbf284329ab072f3}\label{class_country_af86e64cecec9c266dbf284329ab072f3}} 
+\index{Country@{Country}!getName@{getName}}
+\index{getName@{getName}!Country@{Country}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Country\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get country\textquotesingle{}s name \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_country}{Country}}\textquotesingle{}s name 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Country.\+h\end{DoxyCompactItemize}

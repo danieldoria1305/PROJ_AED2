@@ -15,7 +15,7 @@ vector<pair<string, double>> Gestao::getHowFar(int i, string src){
     return flights_.howFar(i,src);
 }
 
-void Gestao::readFileAirlines() {  // INCOMPLETE
+void Gestao::readFileAirlines() {
     std::ifstream airlines;
     airlines.open("../Code/dataset/airlines.csv");
     string code="", name="", callsign="", country="";
@@ -39,7 +39,7 @@ void Gestao::readFileAirlines() {  // INCOMPLETE
     }
 }
 
-void Gestao::readFileAirports() {  // INCOMPLETE
+void Gestao::readFileAirports() {
     std::ifstream airports;
     airports.open("../Code/dataset/airports.csv");
     string code="", name="", city="", country="", latitude="", longitude="";
@@ -71,7 +71,7 @@ void Gestao::readFileAirports() {  // INCOMPLETE
     }
 }
 
-void Gestao::readFileFlights() {  // INCOMPLETE
+void Gestao::readFileFlights() {
     std::ifstream flights;
     flights.open("../Code/dataset/flights.csv");
     string line;
